@@ -4,7 +4,7 @@ const Airtable = require('airtable')
 exports.handler = async function (event, context) {
   const { AT_API_KEY, AT_BASE_ID, AT_API_URL } = process.env
 
-  const send = (body) => ({
+  const send = body => ({
     statusCode: 200,
     body: JSON.stringify(body),
   })
@@ -24,5 +24,5 @@ exports.handler = async function (event, context) {
     })
     .all()
 
-  return send(result)
+  return send(result.map(book => book.get('Title')))
 }
