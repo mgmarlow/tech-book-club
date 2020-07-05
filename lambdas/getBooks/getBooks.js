@@ -18,25 +18,11 @@ exports.handler = async function (event, context) {
 
   const titles = []
 
-  base('Tech Books')
+  const result = await base('Tech Books')
     .select({
-      maxRecords: 12,
       view: 'Grid view',
     })
-    .eachPage(
-      (records, fetchNextPage) => {
-        records.forEach((record) => {
-          titles.push(record.get('Title'))
-        })
+    .all()
 
-        fetchNextPage()
-      },
-      (err) => {
-        if (err) {
-          console.log(err)
-        }
-      },
-    )
-
-  return send(titles)
+  return send(result)
 }
