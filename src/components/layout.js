@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import './layout.css'
+import './theme.css'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -39,11 +40,17 @@ const Layout = ({ children }) => {
       <footer>
         <div
           style={{
+            // backgroundColor: '#e4f1fe',
             backgroundColor: '#eee',
-            padding: '3rem',
+            borderTop: '1px solid rgba(0, 0, 0, 0.125)',
+            padding: '4rem',
             textAlign: 'center',
           }}
-        ></div>
+        >
+          Tech Book Club by{' '}
+          <a href="https://mgmarlow.github.io">Graham Marlow</a>. Check out the{' '}
+          <a href="https://github.com/mgmarlow/tech-book-club/">source code</a>.
+        </div>
       </footer>
     </>
   )

@@ -19,7 +19,14 @@ const useBooks = () => {
 
 const BookItem = ({ book }) => (
   <span>
-    <i>{book.Title}</i> by {book.Author}
+    {book.URL ? (
+      <a href={book.URL}>
+        <i>{book.Title}</i>
+      </a>
+    ) : (
+      <i>{book.Title}</i>
+    )}{' '}
+    by {book.Author}
   </span>
 )
 
