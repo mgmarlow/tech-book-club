@@ -7,13 +7,21 @@ const requestBooks = async () => {
 }
 
 const useBooks = () => {
-  const state = useQuery('books', requestBooks)
+  const state = useQuery('books', requestBooks, {
+    refetchOnWindowFocus: false,
+  })
 
   return {
     ...state,
     books: state.data || [],
   }
 }
+
+const BookItem = ({ book }) => (
+  <span>
+    <i>{book.Title}</i> by {book.Author}
+  </span>
+)
 
 const BookList = () => {
   const { isFetching, books } = useBooks()
@@ -22,28 +30,42 @@ const BookList = () => {
 
   const onDeck = books
     .filter(book => book.Status === 'On Deck')
-    .map(book => <li key={book.id}>{book.Title}</li>)
+    .map(book => (
+      <li key={book.id}>
+        <BookItem book={book} />
+      </li>
+    ))
 
   const completed = books
     .filter(book => book.Status === 'Completed')
-    .map(book => <li key={book.id}>{book.Title}</li>)
+    .map(book => (
+      <li key={book.id}>
+        <BookItem book={book} />
+      </li>
+    ))
+
+  if (isFetching) {
+    return <p>Loading...</p>
+  }
 
   return (
     <div>
-      {current && (
-        <div>
-          <h2>Currently Reading</h2>
-          <p>{current.Title}</p>
-        </div>
-      )}
+      <h2>Books</h2>
+      <hr />
+      <div>
+        <h3>Currently Reading</h3>
+        <p>
+          <BookItem book={current} />
+        </p>
+      </div>
 
       <div>
-        <h2>On Deck</h2>
+        <h3>On Deck</h3>
         <ul>{onDeck}</ul>
       </div>
 
       <div>
-        <h2>Completed</h2>
+        <h3>Completed</h3>
         <ul>{completed}</ul>
       </div>
     </div>
