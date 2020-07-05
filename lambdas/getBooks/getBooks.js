@@ -24,5 +24,10 @@ exports.handler = async function (event, context) {
     })
     .all()
 
-  return send(result.map(book => book.get('Title')))
+  const books = result.map(book => ({
+    id: book.id,
+    ...book.fields,
+  }))
+
+  return send(books)
 }
