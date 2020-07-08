@@ -30,26 +30,24 @@ const BookItem = ({ book }) => (
   </span>
 )
 
-const BookList = () => {
+const BookList = ({ books }) => (
+  <ul>
+    {books.map(book => (
+      <li key={book.id}>
+        <BookItem book={book} />
+      </li>
+    ))}
+  </ul>
+)
+
+const BookListContainer = () => {
   const { isFetching, books } = useBooks()
 
-  const current = books.find(book => book.Status === 'In Progress')
+  const current = books.filter(book => book.Status === 'In Progress')
 
-  const onDeck = books
-    .filter(book => book.Status === 'On Deck')
-    .map(book => (
-      <li key={book.id}>
-        <BookItem book={book} />
-      </li>
-    ))
+  const onDeck = books.filter(book => book.Status === 'On Deck')
 
-  const completed = books
-    .filter(book => book.Status === 'Completed')
-    .map(book => (
-      <li key={book.id}>
-        <BookItem book={book} />
-      </li>
-    ))
+  const completed = books.filter(book => book.Status === 'Completed')
 
   if (isFetching) {
     return <p>Loading...</p>
@@ -61,22 +59,20 @@ const BookList = () => {
       <hr />
       <div>
         <h3>Currently Reading</h3>
-        <p>
-          <BookItem book={current} />
-        </p>
+        <BookList books={current} />
       </div>
 
       <div>
         <h3>On Deck</h3>
-        <ul>{onDeck}</ul>
+        <BookList books={onDeck} />
       </div>
 
       <div>
         <h3>Completed</h3>
-        <ul>{completed}</ul>
+        <BookList books={completed} />
       </div>
     </div>
   )
 }
 
-export default BookList
+export default BookListContainer
