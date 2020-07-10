@@ -45,29 +45,49 @@ const BookListContainer = () => {
 
   const current = books.filter(book => book.Status === 'In Progress')
 
+  const next = current[0] && current[0]['Completed On']
+
   const onDeck = books.filter(book => book.Status === 'On Deck')
 
   const completed = books.filter(book => book.Status === 'Completed')
 
   if (isFetching) {
-    return <p>Loading...</p>
+    return <p>Shelving books...</p>
   }
 
   return (
     <div>
+      {next && (
+        <div
+          style={{
+            padding: '1rem',
+            margin: '2rem 0',
+            backgroundColor: '#eee',
+          }}
+        >
+          <h4 style={{ margin: '0' }}>
+            <span role="img" aria-label="calendar">
+              📅
+            </span>{' '}
+            Next Meeting: {next}
+          </h4>
+        </div>
+      )}
+
       <h2>Books</h2>
       <hr />
-      <div>
+
+      <div style={{ margin: '1rem 0 2rem 0' }}>
         <h3>Currently Reading</h3>
         <BookList books={current} />
       </div>
 
-      <div>
+      <div style={{ margin: '2rem 0' }}>
         <h3>On Deck</h3>
         <BookList books={onDeck} />
       </div>
 
-      <div>
+      <div style={{ margin: '2rem 0' }}>
         <h3>Completed</h3>
         <BookList books={completed} />
       </div>

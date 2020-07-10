@@ -11,6 +11,11 @@ const Container = ({ children }) => (
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+
+    <p style={{ fontSize: '20px' }}>
+      Let's get together to talk about what we've been reading.
+    </p>
+
     <Container>
       <BookList />
     </Container>
