@@ -2,18 +2,20 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 export const BookListItem = ({ book }) => (
-  <span>
-    <Link to={`/books/${book.id}`}>
-      <i>{book.Title}</i>
-    </Link>{' '}
-    by {book.Author}
-  </span>
+  <div>
+    <h4>
+      <Link to={`/books/${book.id}`}>
+        <i>{book.Title}</i>
+      </Link>
+    </h4>
+    <p className="pl-4 subtitle">by {book.Author}</p>
+  </div>
 )
 
 const BookList = ({ books }) => (
   <ul>
     {books.map(book => (
-      <li key={book.id}>
+      <li className="mb-6" key={book.id}>
         <BookListItem book={book} />
       </li>
     ))}

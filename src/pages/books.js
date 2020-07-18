@@ -38,8 +38,16 @@ const BooksPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="All Books" />
-      <h1>All Books</h1>
-      <BookList books={books} />
+
+      <section className="section">
+        <div className="content is-medium">
+          <h1 className="is-marginless">All Books</h1>
+
+          <hr />
+
+          <BookList books={books} />
+        </div>
+      </section>
     </Layout>
   )
 }

@@ -16,18 +16,31 @@ export const query = graphql`
 const BookTemplate = ({ data: { book } }) => {
   return (
     <Layout>
-      <div>
-        <h1 className="title">{book.Title}</h1>
-        <h2 className="subtitle">by {book.Author}</h2>
-      </div>
-      {book.Summary && (
-        <section className="section">
-          <div className="content">
-            <h3>Summary</h3>
-            <blockquote>{book.Summary}</blockquote>
+      <section className="section">
+        <div className="content is-large">
+          <h1>{book.Title}</h1>
+          <p className="is-size-3 subtitle">by {book.Author}</p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="content is-large mb-6">
+          <div className="columns">
+            <div className="column is-one-third">
+              <h3>Metadata</h3>
+              <hr />
+              <a href={book.URL}>Get the book here.</a>
+            </div>
+            {book.Summary && (
+              <div className="column">
+                <h3>Description</h3>
+                <hr />
+                <p>{book.Summary}</p>
+              </div>
+            )}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
     </Layout>
   )
 }
