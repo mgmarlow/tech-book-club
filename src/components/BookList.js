@@ -1,21 +1,4 @@
 import React from 'react'
-import { useQuery } from 'react-query'
-
-const requestBooks = async () => {
-  const response = await fetch('/.netlify/functions/getBooks')
-  return await response.json()
-}
-
-const useBooks = () => {
-  const state = useQuery('books', requestBooks, {
-    refetchOnWindowFocus: false,
-  })
-
-  return {
-    ...state,
-    books: state.data || [],
-  }
-}
 
 const BookItem = ({ book }) => (
   <span>
@@ -40,20 +23,11 @@ const BookList = ({ books }) => (
   </ul>
 )
 
-const BookListContainer = () => {
-  const { isFetching, books } = useBooks()
-
-  const current = books.filter(book => book.Status === 'In Progress')
-
-  const next = current[0] && current[0]['Completed On']
-
-  const onDeck = books.filter(book => book.Status === 'On Deck')
-
+const BookListContainer = ({ books }) => {
+  const current = books.find(book => book.Status === 'In Progress')
   const completed = books.filter(book => book.Status === 'Completed')
 
-  if (isFetching) {
-    return <p>Shelving books...</p>
-  }
+  const next = current && current['Completed_On']
 
   return (
     <div>
@@ -77,15 +51,12 @@ const BookListContainer = () => {
       <h2>Books</h2>
       <hr />
 
-      <div style={{ margin: '1rem 0 2rem 0' }}>
-        <h3>Currently Reading</h3>
-        <BookList books={current} />
-      </div>
-
-      <div style={{ margin: '2rem 0' }}>
-        <h3>On Deck</h3>
-        <BookList books={onDeck} />
-      </div>
+      {current && (
+        <div style={{ margin: '1rem 0 2rem 0' }}>
+          <h3>Currently Reading</h3>
+          <BookItem book={current} />
+        </div>
+      )}
 
       <div style={{ margin: '2rem 0' }}>
         <h3>Completed</h3>
