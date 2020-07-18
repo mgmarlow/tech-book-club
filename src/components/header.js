@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 style={{ margin: 0, marginRight: '2rem', display: 'inline-block' }}>
         <Link
           to="/"
           style={{
@@ -28,6 +28,25 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <Link
+        to="/books"
+        style={{
+          color: '#000',
+          marginRight: '2rem',
+        }}
+      >
+        Books
+      </Link>
+      {/* <Link
+        to="/about"
+        style={{
+          color: '#000',
+          textDecoration: `none`,
+          marginRight: '2rem',
+        }}
+      >
+        About
+      </Link> */}
     </div>
   </header>
 )
