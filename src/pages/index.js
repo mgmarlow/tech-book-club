@@ -1,12 +1,7 @@
 import React from 'react'
-
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import BookList, { BookListItem } from '../components/bookList'
-
-const Container = ({ children }) => (
-  <div style={{ margin: '3rem 0' }}>{children}</div>
-)
 
 export const query = graphql`
   query BookQuery {
@@ -18,6 +13,7 @@ export const query = graphql`
           Author
           Status
           Completed_On
+          Summary
           URL
         }
       }
@@ -25,74 +21,64 @@ export const query = graphql`
   }
 `
 
-const Books = ({ books }) => {
-  const current = books.find(book => book.Status === 'In Progress')
-  const completed = books.filter(book => book.Status === 'Completed')
+const Feature = ({ book }) => (
+  <section className="section is-large">
+    <div className="content is-large">
+      <h1>Currently Reading</h1>
 
-  const next = current && current['Completed_On']
+      <hr />
 
-  return (
-    <div>
-      {next && (
-        <div
-          style={{
-            padding: '1rem',
-            margin: '2rem 0',
-            backgroundColor: '#eee',
-          }}
-        >
-          <h4 style={{ margin: '0' }}>
-            <span role="img" aria-label="calendar">
-              📅
-            </span>{' '}
-            Next Meeting: {next}
-          </h4>
+      {book ? (
+        <div className="columns">
+          <div className="column is-one-third">
+            <div>
+              <p>
+                <Link
+                  className="has-text-weight-bold has-text-dark"
+                  target="__blank"
+                  to={book.URL}
+                >
+                  <i>{book.Title}</i>
+                </Link>
+              </p>
+              <p>by {book.Author}</p>
+            </div>
+          </div>
+          <div className="column">
+            <blockquote>{book.Summary}</blockquote>
+          </div>
         </div>
+      ) : (
+        <p>Voting in progress</p>
       )}
-
-      {/* <h2>Books</h2> */}
-      {/* <hr /> */}
-
-      {current && (
-        <div style={{ margin: '1rem 0 2rem 0' }}>
-          <h3>Currently Reading</h3>
-          <BookListItem book={current} />
-        </div>
-      )}
-
-      <div style={{ margin: '2rem 0' }}>
-        <h3>Completed</h3>
-        <BookList books={completed} />
-      </div>
     </div>
-  )
-}
+  </section>
+)
 
 const IndexPage = ({ data }) => {
   const books = data.allBook.edges.map(edge => edge.node)
+  const current = books.find(book => book.Status === 'In Progress')
+
   return (
     <Layout>
       <SEO title="Home" />
 
-      <p style={{ fontSize: '20px' }}>
-        Let's talk about what we've been reading.
-      </p>
+      <Feature book={current} />
 
-      <Container>
-        <Books books={books} />
-      </Container>
-
-      {/* <Container>
-        <h2>Resources</h2>
-        <hr />
-        <ul>
-          <li>
-            <a href="https://airtable.com/shrOb5oCTEnakggR4">
-              Add a book to the reading list
-            </a>
-          </li>
-        </ul>
-      </Container> */}
+      <section className="section mb-6">
+        <div className="content is-large has-text-centered">
+          <h2>Let's talk about what we've read.</h2>
+          <div className="columns is-centered">
+            <div className="column is-three-quarters">
+              <p>
+                Tech Book Club is an opportunity for us to read, practice, and
+                learn new techniques to better our craft. Join our meetings
+                every other <b>Monday</b> at <b>7:00PM PST</b>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   )
 }

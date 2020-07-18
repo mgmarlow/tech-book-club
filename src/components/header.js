@@ -1,62 +1,65 @@
 import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import React from 'react'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      backgroundColor: '#e4f1fe',
-      borderBottom: '1px solid rgba(0, 0, 0, 0.125)',
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0, marginRight: '2rem', display: 'inline-block' }}>
+const Header = ({ siteTitle }) => {
+  const [isOpen, setIsOpen] = React.useState(false)
+
+  return (
+    <nav className="navbar" role="navigation" aria-label="main navigation">
+      <div className="navbar-brand">
         <Link
+          className="is-size-3 navbar-item has-text-dark has-text-weight-bold"
           to="/"
-          style={{
-            color: '#000',
-            textDecoration: `none`,
-          }}
         >
           {siteTitle}
         </Link>
-      </h1>
-      <Link
-        to="/books"
-        style={{
-          color: '#000',
-          marginRight: '2rem',
-        }}
-      >
-        Books
-      </Link>
-      {/* <Link
-        to="/about"
-        style={{
-          color: '#000',
-          textDecoration: `none`,
-          marginRight: '2rem',
-        }}
-      >
-        About
-      </Link> */}
-    </div>
-  </header>
-)
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+        <a
+          onClick={() => setIsOpen(!isOpen)}
+          role="button"
+          className={classnames('navbar-burger burger', {
+            'is-active': isOpen,
+          })}
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBookClub"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
 
-Header.defaultProps = {
-  siteTitle: ``,
+      <div
+        id="navbarBookClub"
+        className={classnames('navbar-menu', {
+          'is-active': isOpen,
+        })}
+      >
+        <div className="navbar-end">
+          <Link
+            className="navbar-item has-text-dark has-text-weight-bold is-size-5"
+            to="/books"
+          >
+            Books
+          </Link>
+          <Link
+            className="navbar-item has-text-dark has-text-weight-bold is-size-5"
+            to="/about"
+          >
+            About
+          </Link>
+          <Link
+            className="navbar-item has-text-dark has-text-weight-bold is-size-5"
+            to="/resources"
+          >
+            Resources
+          </Link>
+        </div>
+      </div>
+    </nav>
+  )
 }
 
 export default Header

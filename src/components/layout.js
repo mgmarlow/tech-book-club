@@ -10,8 +10,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
-import './layout.css'
-import './theme.css'
+import './theme.scss'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,28 +26,28 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          minHeight: '80vh',
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+
+      <div style={{ minHeight: '70vh' }} className="container">
         <main>{children}</main>
       </div>
-      <footer>
-        <div
-          style={{
-            backgroundColor: '#eee',
-            borderTop: '1px solid rgba(0, 0, 0, 0.125)',
-            padding: '4rem',
-            textAlign: 'center',
-          }}
-        >
+
+      <footer className="footer has-background-light">
+        <div className="content is-medium has-text-centered mt-6">
           Tech Book Club by{' '}
-          <a href="https://mgmarlow.github.io">Graham Marlow</a>. Check out the{' '}
-          <a href="https://github.com/mgmarlow/tech-book-club/">source code</a>.
+          <a
+            className="has-text-dark has-text-weight-bold"
+            href="https://mgmarlow.github.io"
+          >
+            Graham Marlow
+          </a>
+          . Check out the{' '}
+          <a
+            className="has-text-dark has-text-weight-bold"
+            href="https://github.com/mgmarlow/tech-book-club/"
+          >
+            source code
+          </a>
+          .
         </div>
       </footer>
     </>

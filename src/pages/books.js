@@ -20,6 +20,18 @@ export const query = graphql`
   }
 `
 
+/* <Container>
+        <h2>Resources</h2>
+        <hr />
+        <ul>
+          <li>
+            <a href="https://airtable.com/shrOb5oCTEnakggR4">
+              Add a book to the reading list
+            </a>
+          </li>
+        </ul>
+      </Container> */
+
 const BooksPage = ({ data }) => {
   const books = data.allBook.edges.map(edge => edge.node)
 

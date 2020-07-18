@@ -17,13 +17,15 @@ const BookTemplate = ({ data: { book } }) => {
   return (
     <Layout>
       <div>
-        <h1>{book.Title}</h1>
-        <p>by {book.Author}</p>
+        <h1 className="title">{book.Title}</h1>
+        <h2 className="subtitle">by {book.Author}</h2>
       </div>
       {book.Summary && (
-        <section>
-          <h2>Summary</h2>
-          <blockquote>{book.Summary}</blockquote>
+        <section className="section">
+          <div className="content">
+            <h3>Summary</h3>
+            <blockquote>{book.Summary}</blockquote>
+          </div>
         </section>
       )}
     </Layout>
