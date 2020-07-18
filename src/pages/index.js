@@ -8,30 +8,50 @@ const Container = ({ children }) => (
   <div style={{ margin: '3rem 0' }}>{children}</div>
 )
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
+export const query = graphql`
+  query BookQuery {
+    allBook {
+      edges {
+        node {
+          id
+          Title
+          Author
+          Status
+          Completed_On
+          URL
+        }
+      }
+    }
+  }
+`
 
-    <p style={{ fontSize: '20px' }}>
-      Let's get together to talk about what we've been reading.
-    </p>
+const IndexPage = ({ data }) => {
+  const books = data.allBook.edges.map(edge => edge.node)
+  return (
+    <Layout>
+      <SEO title="Home" />
 
-    <Container>
-      <BookList />
-    </Container>
+      <p style={{ fontSize: '20px' }}>
+        Let's get together to talk about what we've been reading.
+      </p>
 
-    <Container>
-      <h2>Resources</h2>
-      <hr />
-      <ul>
-        <li>
-          <a href="https://airtable.com/shrOb5oCTEnakggR4">
-            Add a book to the reading list
-          </a>
-        </li>
-      </ul>
-    </Container>
-  </Layout>
-)
+      <Container>
+        <BookList books={books} />
+      </Container>
+
+      <Container>
+        <h2>Resources</h2>
+        <hr />
+        <ul>
+          <li>
+            <a href="https://airtable.com/shrOb5oCTEnakggR4">
+              Add a book to the reading list
+            </a>
+          </li>
+        </ul>
+      </Container>
+    </Layout>
+  )
+}
 
 export default IndexPage

@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Layout from '../components/layout'
 
 export const query = graphql`
   query($id: String!) {
@@ -12,7 +13,11 @@ export const query = graphql`
 
 const BookTemplate = ({ data }) => {
   console.log(data)
-  return <h1>test</h1>
+  return (
+    <Layout>
+      <h1>test</h1>
+    </Layout>
+  )
 }
 
 export default BookTemplate
