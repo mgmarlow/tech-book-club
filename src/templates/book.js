@@ -7,15 +7,25 @@ export const query = graphql`
     book(id: { eq: $id }) {
       Title
       Author
+      Summary
+      URL
     }
   }
 `
 
-const BookTemplate = ({ data }) => {
-  console.log(data)
+const BookTemplate = ({ data: { book } }) => {
   return (
     <Layout>
-      <h1>test</h1>
+      <div>
+        <h1>{book.Title}</h1>
+        <p>by {book.Author}</p>
+      </div>
+      {book.Summary && (
+        <section>
+          <h2>Summary</h2>
+          <blockquote>{book.Summary}</blockquote>
+        </section>
+      )}
     </Layout>
   )
 }

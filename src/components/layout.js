@@ -40,7 +40,6 @@ const Layout = ({ children }) => {
       <footer>
         <div
           style={{
-            // backgroundColor: '#e4f1fe',
             backgroundColor: '#eee',
             borderTop: '1px solid rgba(0, 0, 0, 0.125)',
             padding: '4rem',
