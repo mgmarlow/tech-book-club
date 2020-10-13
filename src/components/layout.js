@@ -25,9 +25,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
 
-      <div style={{ minHeight: '70vh' }} className="container">
+      <div style={{ minHeight: '70vh' }} className="container is-max-desktop">
         <main>{children}</main>
       </div>
 

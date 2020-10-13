@@ -63,13 +63,19 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
 
-      <Feature book={current} />
+      {/* <Feature book={current} /> */}
 
       <section className="section mb-6">
-        <div className="content is-large has-text-centered">
-          <h2>Let's talk about what we've read.</h2>
-          <div className="columns is-centered">
-            <div className="column is-three-quarters">
+        <div className="columns">
+          <div className="column is-4">
+            <div>Home</div>
+            <div>Books</div>
+            <div>Resources</div>
+          </div>
+          <div className="column is-6">
+            <h1 className="title is-size-1">Tech Book Club</h1>
+            <div className="content is-medium">
+              <h2>Let's talk about what we've read.</h2>
               <p>
                 Tech Book Club is an opportunity for us to read, practice, and
                 learn new techniques to better our craft. Join our meetings
