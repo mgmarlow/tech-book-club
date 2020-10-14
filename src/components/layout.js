@@ -29,18 +29,18 @@ const Layout = ({ children }) => {
         </main>
       </div>
 
-      <footer className="footer has-background-light">
+      <footer className="footer has-background-dark">
         <div className="content is-medium has-text-centered mt-6">
           Tech Book Club by{' '}
           <a
-            className="has-text-dark has-text-weight-bold"
+            className="has-text-light has-text-weight-bold"
             href="https://mgmarlow.github.io"
           >
             Graham Marlow
           </a>
           . Check out the{' '}
           <a
-            className="has-text-dark has-text-weight-bold"
+            className="has-text-light has-text-weight-bold"
             href="https://github.com/mgmarlow/tech-book-club/"
           >
             source code
