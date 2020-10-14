@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BookList from '../components/bookList'
@@ -20,34 +21,28 @@ export const query = graphql`
   }
 `
 
-/* <Container>
-        <h2>Resources</h2>
-        <hr />
-        <ul>
-          <li>
-            <a href="https://airtable.com/shrOb5oCTEnakggR4">
-              Add a book to the reading list
-            </a>
-          </li>
-        </ul>
-      </Container> */
+const BookSection = ({ items, title }) => (
+  <section className="mb-6">
+    <div className="content is-medium">
+      <h2 className="is-marginless is-size-3">{title}</h2>
+      <BookList books={items} />
+    </div>
+  </section>
+)
 
 const BooksPage = ({ data }) => {
   const books = data.allBook.edges.map(edge => edge.node)
+  const reading = books.filter(book => book.Status === 'In Progress')
+  const completed = books.filter(book => book.Status === 'Completed')
+  const shelved = books.filter(book => book.Status === 'New')
 
   return (
     <Layout>
-      <SEO title="All Books" />
+      <SEO title="Books" />
 
-      <section className="section">
-        <div className="content is-medium">
-          <h1 className="is-marginless">All Books</h1>
-
-          <hr />
-
-          <BookList books={books} />
-        </div>
-      </section>
+      <BookSection title="Reading" items={reading} />
+      <BookSection title="Completed" items={completed} />
+      <BookSection title="Shelved" items={shelved} />
     </Layout>
   )
 }
