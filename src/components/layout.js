@@ -7,28 +7,26 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
 
-import Header from './header'
+import Sidebar from './sidebar'
 import './theme.scss'
+import styles from './layout.module.scss'
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+      <div className="container is-max-desktop px-3 py-3">
+        <main className={styles.mainContainer}>
+          <div className="columns">
+            <div className="column is-4-desktop is-narrow-tablet">
+              <Sidebar />
+            </div>
 
-      <div style={{ minHeight: '70vh' }} className="container is-max-desktop">
-        <main>{children}</main>
+            <div style={{ maxWidth: '700px' }} className="column">
+              {children}
+            </div>
+          </div>
+        </main>
       </div>
 
       <footer className="footer has-background-light">

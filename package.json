@@ -25,6 +25,7 @@
     "react-query": "^2.4.13"
   },
   "devDependencies": {
+    "netlify-cli": "^2.65.5",
     "prettier": "2.0.5"
   },
   "keywords": [
