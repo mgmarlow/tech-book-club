@@ -13,7 +13,7 @@ const Sidebar = () => {
   return (
     <div>
       <ul>
-        <SidebarItem to="/about">About</SidebarItem>
+        <SidebarItem to="/">About</SidebarItem>
         <SidebarItem to="/books">Books</SidebarItem>
         <SidebarItem to="/resources">Resources</SidebarItem>
       </ul>

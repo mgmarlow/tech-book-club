@@ -2,23 +2,23 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-export const query = graphql`
-  query BookQuery {
-    allBook {
-      edges {
-        node {
-          id
-          Title
-          Author
-          Status
-          Completed_On
-          Summary
-          URL
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query BookQuery {
+//     allBook {
+//       edges {
+//         node {
+//           id
+//           Title
+//           Author
+//           Status
+//           Completed_On
+//           Summary
+//           URL
+//         }
+//       }
+//     }
+//   }
+// `
 
 const IndexPage = ({ data }) => {
   // TODO: Move these to the /books tab
@@ -30,8 +30,6 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
 
       <section>
-        <h1 className="title is-size-1">Tech Book Club</h1>
-
         <div className="content is-medium">
           <h2>Let's talk about what we've read.</h2>
           <p>
