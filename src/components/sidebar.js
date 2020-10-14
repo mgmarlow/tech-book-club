@@ -3,7 +3,11 @@ import { Link } from 'gatsby'
 
 const SidebarItem = ({ children, to }) => (
   <li className="has-text-right is-inline-block-mobile mr-4">
-    <Link className="has-text-weight-bold is-size-5" to={to}>
+    <Link
+      activeClassName="has-text-primary"
+      className="has-text-weight-bold is-size-5"
+      to={to}
+    >
       {children}
     </Link>
   </li>
