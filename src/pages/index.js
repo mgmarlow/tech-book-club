@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
 
       <section className="section pl-0 pt-0 pb-2">
         <div className="content is-medium">
-          <h2>Let's talk about what we've read.</h2>
+          <h2>Let's talk about what we're reading.</h2>
           <p>
             Tech Book Club is an opportunity for us to read, practice, and learn
             new techniques to better our craft. Join our meetings every other{' '}
