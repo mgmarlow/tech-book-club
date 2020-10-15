@@ -19,7 +19,7 @@ const Sidebar = () => {
       <ul>
         <SidebarItem to="/">About</SidebarItem>
         <SidebarItem to="/books">Books</SidebarItem>
-        {/* <SidebarItem to="/resources">Resources</SidebarItem> */}
+        <SidebarItem to="/recipes">Recipes</SidebarItem>
       </ul>
     </div>
   )
