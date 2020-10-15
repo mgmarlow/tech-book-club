@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
@@ -22,23 +23,22 @@ const IndexPage = ({ data }) => {
         <div className="content is-medium">
           <h2>What goes into a discussion?</h2>
           <p>
-            Book club discussions are aimed at asking questions rather than
-            summarizing the reading. Keep these questions in mind when reading:
+            Tech Book Club discussions are focused on asking questions rather
+            than summarizing the reading. Keep the following in mind when
+            reading:
           </p>
 
           <ul>
             <li>What is the central idea of the material?</li>
-            <li>How does the material affect our practice?</li>
+            <li>What arguments support or detract from the material?</li>
+            <li>How does the material affect our craft?</li>
             <li>Do you agree or disagree with the author's perspective?</li>
-            <li>
-              What arguments support or detract from the material's premise?
-            </li>
           </ul>
 
           <p>
-            An assigned leader kicks off a session with a question to spark
-            discussion. New leaders are assigned every session to help guide
-            participation from all club members.
+            Discussion leaders kick off each session with a question to spark
+            conversation. New leaders are assigned every session to help
+            encourage participation from all club members.
           </p>
         </div>
       </section>
@@ -47,22 +47,27 @@ const IndexPage = ({ data }) => {
         <div className="content is-medium">
           <h2>Want to add a book?</h2>
           <p>
-            Here are some guidelines for choosing a book (or article, paper,
-            talk):
+            Take a look at the{' '}
+            <Link className="has-text-primary" to="/books">
+              book list
+            </Link>{' '}
+            to see if your book has already been added. Here are some guidelines
+            when choosing a book (or article, paper, talk):
           </p>
           <ul>
             <li>
-              Choose books that relate to software development: either the
-              practice of programming itself or techniques and ideas that play a
-              role in our careers.
+              Choose books that relate to software development, whether that be
+              the practice of programming itself or techniques that play a role
+              in our careers.
             </li>
             <li>
               Consider choosing books that are available on{' '}
               <a href="https://learning.oreilly.com/home/">O'Reilly</a>.
             </li>
             <li>
-              It's helpful to consider what chapters of a book you'd like to
-              focus on to guide the structure of discussion sessions.
+              Consider how you might structure the book into discussion
+              sessions. Will there be three sections for three parts, or will we
+              pick and choose specific chapters?
             </li>
           </ul>
           <p>
