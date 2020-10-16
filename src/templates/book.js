@@ -35,7 +35,32 @@ const Summary = ({ summary }) => {
   )
 }
 
+const useComments = commentsRef => {
+  React.useEffect(() => {
+    const instance = commentsRef.current
+
+    if (!instance) {
+      return
+    }
+
+    const script = document.createElement('script')
+
+    script.setAttribute('src', 'https://utteranc.es/client.js')
+    script.setAttribute('async', true)
+    script.setAttribute('repo', 'mgmarlow/comments')
+    script.setAttribute('issue-term', 'pathname')
+    script.setAttribute('theme', 'dark-blue')
+    script.setAttribute('crossorigin', 'anonymous')
+
+    instance.appendChild(script)
+  }, [commentsRef])
+}
+
 const BookTemplate = ({ data: { book } }) => {
+  const commentsRef = React.useRef(null)
+
+  useComments(commentsRef)
+
   return (
     <Layout>
       <section>
@@ -58,6 +83,8 @@ const BookTemplate = ({ data: { book } }) => {
           </div>
         </div>
       </section>
+
+      <div ref={commentsRef} className="mt-6" />
     </Layout>
   )
 }
