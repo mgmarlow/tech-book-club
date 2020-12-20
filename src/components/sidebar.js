@@ -19,7 +19,8 @@ const Sidebar = () => {
       <ul>
         <SidebarItem to="/">About</SidebarItem>
         <SidebarItem to="/books">Books</SidebarItem>
-        <SidebarItem to="/recipes">Recipes</SidebarItem>
+        <SidebarItem to="/faq">FAQ</SidebarItem>
+        {/* <SidebarItem to="/recipes">Recipes</SidebarItem> */}
       </ul>
     </div>
   )

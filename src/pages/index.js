@@ -13,8 +13,8 @@ const IndexPage = ({ data }) => {
           <h2>Let's talk about what we're reading.</h2>
           <p>
             Tech Book Club is an opportunity for us to read, practice, and learn
-            new techniques to better our craft. Join our meetings every other{' '}
-            <b>Monday</b> at <b>7:00PM PST</b>.
+            new techniques to better our craft. Join our meetings every{' '}
+            <b>Monday at 4:00PM PST</b>.
           </p>
         </div>
       </section>
