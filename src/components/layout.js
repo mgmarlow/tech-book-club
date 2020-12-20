@@ -18,13 +18,13 @@ const Layout = ({ children }) => {
       <div className="container is-max-desktop px-3 py-3">
         <main className={styles.mainContainer}>
           <div className="columns">
-            <div className="column is-offset-4-desktop is-offset-2-tablet">
+            <div className="column is-offset-3-desktop is-offset-2-tablet">
               <h1 className="title is-size-1">Tech Book Club</h1>
             </div>
           </div>
 
           <div className="columns">
-            <div className="column is-4-desktop is-2-tablet">
+            <div className="column is-3-desktop is-2-tablet">
               <Sidebar />
             </div>
 
