@@ -7,7 +7,7 @@ const FAQ_ITEMS = [
     question:
       "Can I still attend the discussion session if I didn't read the material?",
     answer:
-      "Yes! Please attend the discussion session, even if you didn't have time to read the assigned material. Your contributions are still valuable!",
+      "Yes! Please attend the discussion, even if you didn't have time to read the assigned material. Your contributions are still valuable!",
   },
   {
     question:
