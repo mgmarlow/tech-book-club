@@ -10,6 +10,7 @@ export async function getStaticProps() {
   }
 }
 
+// TODO:
 export default function Books({ books }) {
   return (
     <main>
