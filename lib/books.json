@@ -1,200 +1,146 @@
 [
   {
     "id": 1,
-    "Title": "Clean Agile: Back to Basics",
-    "Author": "Robert C. Martin",
-    "Status": "New",
-    "URL": "https://learning.oreilly.com/library/view/clean-agile-back/9780135782002/",
-    "Summary": "",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": "Book"
+    "title": "Clean Agile: Back to Basics",
+    "author": "Robert C. Martin",
+    "state": "new",
+    "url": "https://learning.oreilly.com/library/view/clean-agile-back/9780135782002/",
+    "summary": ""
   },
   {
     "id": 2,
-    "Title": "Accelerate: The Science of Lean Software and DevOps",
-    "Author": "Nicole Forsgren, Jez Humble, Gene Kim",
-    "Status": "New",
-    "URL": "https://learning.oreilly.com/library/view/accelerate/9781457191435/",
-    "Summary": "Accelerate your organization to win in the marketplace.\n\n\nHow can we apply technology to drive business value? For years, we've been told that the performance of software delivery teams doesn't matter―that it can't provide a competitive advantage to our companies. Through four years of groundbreaking research to include data collected from the State of DevOps reports conducted with Puppet, Dr. Nicole Forsgren, Jez Humble, and Gene Kim set out to find a way to measure software delivery performance―and what drives it―using rigorous statistical methods. This book presents both the findings and the science behind that research, making the information accessible for readers to apply in their own organizations.\n\nReaders will discover how to measure the performance of their teams, and what capabilities they should invest in to drive higher performance. This book is ideal for management at every level.",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": "Book"
+    "title": "Accelerate: The Science of Lean Software and DevOps",
+    "author": "Nicole Forsgren, Jez Humble, Gene Kim",
+    "state": "new",
+    "url": "https://learning.oreilly.com/library/view/accelerate/9781457191435/",
+    "summary": "Accelerate your organization to win in the marketplace.\n\n\nHow can we apply technology to drive business value? For years, we've been told that the performance of software delivery teams doesn't matter―that it can't provide a competitive advantage to our companies. Through four years of groundbreaking research to include data collected from the State of DevOps reports conducted with Puppet, Dr. Nicole Forsgren, Jez Humble, and Gene Kim set out to find a way to measure software delivery performance―and what drives it―using rigorous statistical methods. This book presents both the findings and the science behind that research, making the information accessible for readers to apply in their own organizations.\n\nReaders will discover how to measure the performance of their teams, and what capabilities they should invest in to drive higher performance. This book is ideal for management at every level."
   },
   {
     "id": 3,
-    "Title": "Shape Up: Stop Running in Circles and Ship Work that Matters",
-    "Author": "Ryan Singer",
-    "Status": "Completed",
-    "URL": "https://basecamp.com/shapeup",
-    "Summary": "Shape Up is for product development teams who struggle to ship.\n\nFull of eye-opening insights, Shape Up will help you break free of \"best practices\" that aren't working, think deeper about the right problems, and start shipping meaningful projects.",
-    "Rating": "",
-    "Completed On": "7/27/2020",
-    "Tags": "Book"
+    "title": "Shape Up: Stop Running in Circles and Ship Work that Matters",
+    "author": "Ryan Singer",
+    "state": "completed",
+    "url": "https://basecamp.com/shapeup",
+    "summary": "Shape Up is for product development teams who struggle to ship.\n\nFull of eye-opening insights, Shape Up will help you break free of \"best practices\" that aren't working, think deeper about the right problems, and start shipping meaningful projects."
   },
   {
     "id": 4,
-    "Title": "Programming as Theory Building",
-    "Author": "Peter Naur",
-    "Status": "Completed",
-    "URL": "http://pages.cs.wisc.edu/~remzi/Naur.pdf",
-    "Summary": "",
-    "Rating": "",
-    "Completed On": "6/22/2020",
-    "Tags": "Article"
+    "title": "Programming as Theory Building",
+    "author": "Peter Naur",
+    "state": "completed",
+    "url": "http://pages.cs.wisc.edu/~remzi/Naur.pdf",
+    "summary": ""
   },
   {
     "id": 5,
-    "Title": "The Big Ball of Mud",
-    "Author": "Jospeh Yoder",
-    "Status": "New",
-    "URL": "https://joeyoder.com/PDFs/mud.pdf",
-    "Summary": "While much attention has been focused on high-level software architectural patterns, what is, in effect, the de-facto standard software architecture is seldom discussed. This paper examines this most frequently deployed of software architectures: the BIG BALL OF MUD. A BIG BALL OF MUD is a casually, even haphazardly, structured system. Its organization, if one can call it that, is dictated more by expediency than design. Yet, its enduring popularity cannot merely be indicative of a general disregard for architecture.",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": "Article"
+    "title": "The Big Ball of Mud",
+    "author": "Jospeh Yoder",
+    "state": "new",
+    "url": "https://joeyoder.com/PDFs/mud.pdf",
+    "summary": "While much attention has been focused on high-level software architectural patterns, what is, in effect, the de-facto standard software architecture is seldom discussed. This paper examines this most frequently deployed of software architectures: the BIG BALL OF MUD. A BIG BALL OF MUD is a casually, even haphazardly, structured system. Its organization, if one can call it that, is dictated more by expediency than design. Yet, its enduring popularity cannot merely be indicative of a general disregard for architecture."
   },
   {
     "id": 6,
-    "Title": "A Laboratory for Teaching Object-Oriented Thinking",
-    "Author": "Kent Beck",
-    "Status": "New",
-    "URL": "http://web.cs.iastate.edu/~hridesh/teaching/362/07/01/papers/p1-beck.pdf",
-    "Summary": "",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": "Article"
+    "title": "A Laboratory for Teaching Object-Oriented Thinking",
+    "author": "Kent Beck",
+    "state": "new",
+    "url": "http://web.cs.iastate.edu/~hridesh/teaching/362/07/01/papers/p1-beck.pdf",
+    "summary": ""
   },
   {
     "id": 7,
-    "Title": "Clean Architecture",
-    "Author": "Carol Nichols",
-    "Status": "New",
-    "URL": "https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/",
-    "Summary": "",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": "Book"
+    "title": "Clean Architecture",
+    "author": "Carol Nichols",
+    "state": "new",
+    "url": "https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/",
+    "summary": ""
   },
   {
     "id": 8,
-    "Title": "Thinking in Systems: A Primer",
-    "Author": "Donella H. Meadows",
-    "Status": "New",
-    "URL": "https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557",
-    "Summary": "Thinking in Systems, is a concise and crucial book offering insight for problem solving on scales ranging from the personal to the global. Edited by the Sustainability Institute’s Diana Wright, this essential primer brings systems thinking out of the realm of computers and equations and into the tangible world, showing readers how to develop the systems-thinking skills that thought leaders across the globe consider critical for 21st-century life.",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": "Book"
+    "title": "Thinking in Systems: A Primer",
+    "author": "Donella H. Meadows",
+    "state": "new",
+    "url": "https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557",
+    "summary": "Thinking in Systems, is a concise and crucial book offering insight for problem solving on scales ranging from the personal to the global. Edited by the Sustainability Institute’s Diana Wright, this essential primer brings systems thinking out of the realm of computers and equations and into the tangible world, showing readers how to develop the systems-thinking skills that thought leaders across the globe consider critical for 21st-century life."
   },
   {
     "id": 9,
-    "Title": "Patterns for Managing Source Code Branches",
-    "Author": "Martin Fowler",
-    "Status": "New",
-    "URL": "https://martinfowler.com/articles/branching-patterns.html",
-    "Summary": "",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": "Article"
+    "title": "Patterns for Managing Source Code Branches",
+    "author": "Martin Fowler",
+    "state": "new",
+    "url": "https://martinfowler.com/articles/branching-patterns.html",
+    "summary": ""
   },
   {
     "id": 10,
-    "Title": "Fluent Interfaces",
-    "Author": "Martin Fowler",
-    "Status": "Completed",
-    "URL": "https://www.martinfowler.com/bliki/FluentInterface.html",
-    "Summary": "",
-    "Rating": "",
-    "Completed On": "7/13/2020",
-    "Tags": "Article"
+    "title": "Fluent Interfaces",
+    "author": "Martin Fowler",
+    "state": "completed",
+    "url": "https://www.martinfowler.com/bliki/FluentInterface.html",
+    "summary": ""
   },
   {
     "id": 11,
-    "Title": "Presentation-Domain-Data Layering",
-    "Author": "Martin Fowler",
-    "Status": "Completed",
-    "URL": "https://www.martinfowler.com/bliki/PresentationDomainDataLayering.html",
-    "Summary": "",
-    "Rating": "",
-    "Completed On": "7/13/2020",
-    "Tags": "Article"
+    "title": "Presentation-Domain-Data Layering",
+    "author": "Martin Fowler",
+    "state": "completed",
+    "url": "https://www.martinfowler.com/bliki/PresentationDomainDataLayering.html",
+    "summary": ""
   },
   {
     "id": 12,
-    "Title": "Who Needs an Architect?",
-    "Author": "Martin Fowler",
-    "Status": "New",
-    "URL": "https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf",
-    "Summary": "",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": "Article"
+    "title": "Who Needs an Architect?",
+    "author": "Martin Fowler",
+    "state": "new",
+    "url": "https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf",
+    "summary": ""
   },
   {
     "id": 13,
-    "Title": "The DevOps Handbook",
-    "Author": "Gene Kim",
-    "Status": "New",
-    "URL": "https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002",
-    "Summary": "Increase profitability, elevate work culture, and exceed productivity goals through DevOps practices.\n\nMore than ever, the effective management of technology is critical for business competitiveness. For decades, technology leaders have struggled to balance agility, reliability, and security. The consequences of failure have never been greater―whether it's the healthcare.gov debacle, cardholder data breaches, or missing the boat with Big Data in the cloud.",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": ""
+    "title": "The DevOps Handbook",
+    "author": "Gene Kim",
+    "state": "new",
+    "url": "https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002",
+    "summary": "Increase profitability, elevate work culture, and exceed productivity goals through DevOps practices.\n\nMore than ever, the effective management of technology is critical for business competitiveness. For decades, technology leaders have struggled to balance agility, reliability, and security. The consequences of failure have never been greater―whether it's the healthcare.gov debacle, cardholder data breaches, or missing the boat with Big Data in the cloud."
   },
   {
     "id": 14,
-    "Title": "Domain-Driven Design: Tackling Complexity in the Heart of Software",
-    "Author": "Eric Evans",
-    "Status": "In Progress",
-    "URL": "https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/",
-    "Summary": "The software development community widely acknowledges that domain modeling is central to software design. Through domain models, software developers are able to express rich functionality and translate it into a software implementation that truly serves the needs of its users. But despite its obvious importance, there are few practical resources that explain how to incorporate effective domain modeling into the software development process.\n\nDomain-Driven Design fills that need. This is not a book about specific technologies. It offers readers a systematic approach to domain-driven design, presenting an extensive set of design best practices, experience-based techniques, and fundamental principles that facilitate the development of software projects facing complex domains. Intertwining design and development practice, this book incorporates numerous examples based on actual projects to illustrate the application of domain-driven design to real-world software development.\n\nReaders learn how to use a domain model to make a complex development effort more focused and dynamic. A core of best practices and standard patterns provides a common language for the development team. A shift in emphasis—refactoring not just the code but the model underlying the code—in combination with the frequent iterations of Agile development leads to deeper insight into domains and enhanced communication between domain expert and programmer. Domain-Driven Design then builds on this foundation, and addresses modeling and design for complex systems and larger organizations.",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": ""
+    "title": "Domain-Driven Design: Tackling Complexity in the Heart of Software",
+    "author": "Eric Evans",
+    "state": "in_progress",
+    "url": "https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/",
+    "summary": "The software development community widely acknowledges that domain modeling is central to software design. Through domain models, software developers are able to express rich functionality and translate it into a software implementation that truly serves the needs of its users. But despite its obvious importance, there are few practical resources that explain how to incorporate effective domain modeling into the software development process.\n\nDomain-Driven Design fills that need. This is not a book about specific technologies. It offers readers a systematic approach to domain-driven design, presenting an extensive set of design best practices, experience-based techniques, and fundamental principles that facilitate the development of software projects facing complex domains. Intertwining design and development practice, this book incorporates numerous examples based on actual projects to illustrate the application of domain-driven design to real-world software development.\n\nReaders learn how to use a domain model to make a complex development effort more focused and dynamic. A core of best practices and standard patterns provides a common language for the development team. A shift in emphasis—refactoring not just the code but the model underlying the code—in combination with the frequent iterations of Agile development leads to deeper insight into domains and enhanced communication between domain expert and programmer. Domain-Driven Design then builds on this foundation, and addresses modeling and design for complex systems and larger organizations."
   },
   {
     "id": 15,
-    "Title": "Patterns of Enterprise Application Architecture",
-    "Author": "Martin Fowler",
-    "Status": "New",
-    "URL": "https://learning.oreilly.com/library/view/patterns-of-enterprise/0321127420/",
-    "Summary": "Patterns of Enterprise Application Architecture is written in direct response to the stiff challenges that face enterprise application developers. The author, noted object-oriented designer Martin Fowler, noticed that despite changes in technology--from Smalltalk to CORBA to Java to .NET--the same basic design ideas can be adapted and applied to solve common problems. With the help of an expert group of contributors, Martin distills over forty recurring solutions into patterns. The result is an indispensable handbook of solutions that are applicable to any enterprise application platform.",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": ""
+    "title": "Patterns of Enterprise Application Architecture",
+    "author": "Martin Fowler",
+    "state": "new",
+    "url": "https://learning.oreilly.com/library/view/patterns-of-enterprise/0321127420/",
+    "summary": "Patterns of Enterprise Application Architecture is written in direct response to the stiff challenges that face enterprise application developers. The author, noted object-oriented designer Martin Fowler, noticed that despite changes in technology--from Smalltalk to CORBA to Java to .NET--the same basic design ideas can be adapted and applied to solve common problems. With the help of an expert group of contributors, Martin distills over forty recurring solutions into patterns. The result is an indispensable handbook of solutions that are applicable to any enterprise application platform."
   },
   {
     "id": 16,
-    "Title": "Beyond Software Architecture: Creating and Sustaining Winning Solutions",
-    "Author": "Luke Hohmann",
-    "Status": "New",
-    "URL": "https://learning.oreilly.com/library/view/beyond-software-architecture/0201775948/",
-    "Summary": "",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": ""
+    "title": "Beyond Software Architecture: Creating and Sustaining Winning Solutions",
+    "author": "Luke Hohmann",
+    "state": "new",
+    "url": "https://learning.oreilly.com/library/view/beyond-software-architecture/0201775948/",
+    "summary": ""
   },
   {
     "id": 17,
-    "Title": "The Imposter's Handbook",
-    "Author": "Rob Cornery",
-    "Status": "New",
-    "URL": "https://bigmachine.io/products/the-imposters-handbook/",
-    "Summary": "",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": ""
+    "title": "The Imposter's Handbook",
+    "author": "Rob Cornery",
+    "state": "new",
+    "url": "https://bigmachine.io/products/the-imposters-handbook/",
+    "summary": ""
   },
   {
     "id": 18,
-    "Title": "Micro Frontends",
-    "Author": "Martin Fowler",
-    "Status": "",
-    "URL": "https://martinfowler.com/articles/micro-frontends.html",
-    "Summary": "",
-    "Rating": "",
-    "Completed On": "",
-    "Tags": ""
+    "title": "Micro Frontends",
+    "author": "Martin Fowler",
+    "state": "new",
+    "url": "https://martinfowler.com/articles/micro-frontends.html",
+    "summary": ""
   }
 ]
