@@ -14,3 +14,6 @@ Run the server
 yarn dev
 ```
 
+## Kudos
+
+- [undraw](https://undraw.co/) for SVG illustrations
