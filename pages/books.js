@@ -52,7 +52,7 @@ export default function Books({ books }) {
             </div>
 
             <div>
-              <h2 className="is-size-2">New</h2>
+              <h2 className="is-size-2">Queued</h2>
               <hr />
               <BookList books={newBooks} />
             </div>
