@@ -8,14 +8,27 @@ const AboutSection = () => {
     <section className="section is-medium">
       <div className="container">
         <div className="columns is-vcentered">
-          <div className="column">
+          <div className="column is-half">
             <div className="content is-medium">
               <h2>What's it all about?</h2>
-              <p>todos!</p>
+              <p>
+                Each week we discuss assigned reading with the goal of analyzing
+                it for better understanding. Occasionally we'll conduct
+                workshops or demos as practical exercises to compliment what
+                we've read.
+              </p>
+
+              <p>These are the sorts of questions we like to ask:</p>
+
+              <ul>
+                <li>
+                  What is the central idea the author wants to get across?
+                </li>
+                <li>What arguments support or detract from their argument?</li>
+                <li>Have you applied similar techniques in your experience?</li>
+              </ul>
             </div>
           </div>
-
-          <div className="column">todo book image here</div>
         </div>
       </div>
     </section>
