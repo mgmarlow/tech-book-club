@@ -40,14 +40,6 @@
     "summary": "While much attention has been focused on high-level software architectural patterns, what is, in effect, the de-facto standard software architecture is seldom discussed. This paper examines this most frequently deployed of software architectures: the BIG BALL OF MUD. A BIG BALL OF MUD is a casually, even haphazardly, structured system. Its organization, if one can call it that, is dictated more by expediency than design. Yet, its enduring popularity cannot merely be indicative of a general disregard for architecture."
   },
   {
-    "id": 6,
-    "title": "A Laboratory for Teaching Object-Oriented Thinking",
-    "author": "Kent Beck",
-    "state": "new",
-    "url": "http://web.cs.iastate.edu/~hridesh/teaching/362/07/01/papers/p1-beck.pdf",
-    "summary": ""
-  },
-  {
     "id": 7,
     "title": "Clean Architecture",
     "author": "Carol Nichols",
@@ -107,7 +99,7 @@
     "id": 14,
     "title": "Domain-Driven Design: Tackling Complexity in the Heart of Software",
     "author": "Eric Evans",
-    "state": "in_progress",
+    "state": "completed",
     "url": "https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/",
     "summary": "The software development community widely acknowledges that domain modeling is central to software design. Through domain models, software developers are able to express rich functionality and translate it into a software implementation that truly serves the needs of its users. But despite its obvious importance, there are few practical resources that explain how to incorporate effective domain modeling into the software development process.\n\nDomain-Driven Design fills that need. This is not a book about specific technologies. It offers readers a systematic approach to domain-driven design, presenting an extensive set of design best practices, experience-based techniques, and fundamental principles that facilitate the development of software projects facing complex domains. Intertwining design and development practice, this book incorporates numerous examples based on actual projects to illustrate the application of domain-driven design to real-world software development.\n\nReaders learn how to use a domain model to make a complex development effort more focused and dynamic. A core of best practices and standard patterns provides a common language for the development team. A shift in emphasis—refactoring not just the code but the model underlying the code—in combination with the frequent iterations of Agile development leads to deeper insight into domains and enhanced communication between domain expert and programmer. Domain-Driven Design then builds on this foundation, and addresses modeling and design for complex systems and larger organizations."
   },
@@ -142,5 +134,13 @@
     "state": "new",
     "url": "https://martinfowler.com/articles/micro-frontends.html",
     "summary": ""
+  },
+  {
+    "id": 19,
+    "title": "How to do a code review",
+    "author": "Google Engineering Practices",
+    "state": "new",
+    "url": "https://google.github.io/eng-practices/review/reviewer/",
+    "summary": "Google has many generalized engineering practices that cover all languages and all projects. These documents represent our collective experience of various best practices that we have developed over time."
   }
 ]

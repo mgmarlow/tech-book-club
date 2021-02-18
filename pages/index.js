@@ -1,59 +1,26 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import SEO from '../components/SEO'
+import Footer from '../components/Footer'
 
 const AboutSection = () => {
   return (
     <section className="section is-medium">
       <div className="container">
-        <div className="content is-medium">
-          <h2>What's it all about?</h2>
-          <p>todos!</p>
+        <div className="columns is-vcentered">
+          <div className="column">
+            <div className="content is-medium">
+              <h2>What's it all about?</h2>
+              <p>todos!</p>
+            </div>
+          </div>
+
+          <div className="column">todo book image here</div>
         </div>
       </div>
     </section>
   )
 }
-
-// TODO:
-// const FAQSection = () => {
-//   return (
-//     <section className="section has-background-dark is-medium">
-//       <div className="container">
-//         <div className="content is-medium has-text-white">
-//           <h2 className="has-text-white">FAQ</h2>
-
-//           <div className="columns">
-//             <div className="column is-two-thirds">
-//               <h3 className="has-text-white">
-//                 Can I attend if I didn't read the material?
-//               </h3>
-//               <p>
-//                 Yes! Please attend the discussion, even if you didn't have time
-//                 to read the assigned material. Your contributions are still
-//                 valuable!
-//               </p>
-
-//               <h3 className="has-text-white">
-//                 Can I skip leading a discussion?
-//               </h3>
-//               <p>Absolutely. Discussion leaders are volunteers.</p>
-
-//               <h3 className="has-text-white">
-//                 What notetaking apps do the cool kids use?
-//               </h3>
-//               <p>
-//                 <a href="https://notion.so">Notion</a> is my personal favorite,
-//                 but some other great alternatives are{' '}
-//                 <a href="https://obsidian.md">Obsidian</a>,{' '}
-//                 <a href="https://foambubble.github.io/foam/">Foam</a>, and{' '}
-//                 <a href="https://www.zettlr.com/">Zettlr</a>.
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
 
 const AddBookSection = () => {
   return (
@@ -99,24 +66,47 @@ const AddBookSection = () => {
   )
 }
 
-export default function Home() {
+const Hero = () => {
   return (
-    <main>
-      <section className="hero is-large">
-        <div className="hero-body">
-          <div className="container">
-            <p className="title is-size-1-desktop">
-              Let's talk about what we're reading.
-            </p>
-            <p className="subtitle">
-              Join a group of engineers and better your software skills.
-            </p>
+    <section className="hero is-large">
+      <div className="hero-body">
+        <div className="container">
+          <p className="title is-size-1-desktop">
+            Let's talk about what we're reading.
+          </p>
+          <p className="subtitle">
+            Join a group of engineers and better your software skills.
+          </p>
+
+          <div>
+            <button className="button has-text-weight-bold is-primary">
+              Join the discord
+            </button>
+
+            <Link href="/books">
+              <button className="button is-ghost has-text-dark">
+                Browse the books
+              </button>
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+  )
+}
 
-      <AboutSection />
-      <AddBookSection />
-    </main>
+export default function Home() {
+  return (
+    <>
+      <SEO />
+
+      <main>
+        <Hero />
+        <AboutSection />
+        <AddBookSection />
+      </main>
+
+      <Footer />
+    </>
   )
 }

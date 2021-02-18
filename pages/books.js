@@ -1,3 +1,4 @@
+import Layout from '../components/Layout'
 import { getAllBooks } from '../lib/books'
 
 export async function getStaticProps() {
@@ -13,12 +14,14 @@ export async function getStaticProps() {
 // TODO:
 export default function Books({ books }) {
   return (
-    <main>
-      <ul>
-        {books.map(book => (
-          <li>{book.title}</li>
-        ))}
-      </ul>
-    </main>
+    <Layout>
+      <main>
+        <ul>
+          {books.map(book => (
+            <li>{book.title}</li>
+          ))}
+        </ul>
+      </main>
+    </Layout>
   )
 }
