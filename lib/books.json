@@ -142,5 +142,14 @@
     "state": "new",
     "url": "https://google.github.io/eng-practices/review/reviewer/",
     "summary": "Google has many generalized engineering practices that cover all languages and all projects. These documents represent our collective experience of various best practices that we have developed over time."
+  },
+  {
+    "id": 20,
+    "title": "Hackers & Painters",
+    "author": "Paul Graham",
+    "state": "new",
+    "url": "https://learning.oreilly.com/library/view/hackers-painters/0596006624/",
+    "summary": "A collection of Paul Graham's essays.",
+    "img": "https://learning.oreilly.com/library/cover/0596006624/"
   }
 ]
