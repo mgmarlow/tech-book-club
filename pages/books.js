@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import { getAllBooks } from '../lib/books'
+import Book from '../components/Book'
 
 export async function getStaticProps() {
   const books = getAllBooks()
@@ -11,25 +12,18 @@ export async function getStaticProps() {
   }
 }
 
-function BookItem({ book }) {
-  return (
-    <div>
-      <h3 className="is-size-4">
-        <i>{book.title}</i>
-      </h3>
-      <p className="subtitle">{book.author}</p>
-    </div>
-  )
-}
-
 function BookList({ books }) {
   return (
     <ul>
-      {books.map(book => (
-        <li className="mb-6" key={book.id}>
-          <BookItem book={book} />
-        </li>
-      ))}
+      <div className="columns is-multiline">
+        {books.map(book => (
+          <div className="column is-one-fifth" key={book.id}>
+            <li className="mb-6">
+              <Book book={book} />
+            </li>
+          </div>
+        ))}
+      </div>
     </ul>
   )
 }
