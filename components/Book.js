@@ -14,11 +14,13 @@ export default function Book({ book }) {
       </div>
 
       <div className="content is-small">
-        <h5 className={classnames('m-0', styles.title)}>
+        <h5 title={book.title} className={classnames('m-0', styles.overflow)}>
           <i>{book.title}</i>
         </h5>
 
-        <p>{book.author}</p>
+        <p className={styles.overflow} title={book.author}>
+          {book.author}
+        </p>
       </div>
     </div>
   )
