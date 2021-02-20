@@ -1,17 +1,18 @@
 import classnames from 'classnames'
-import Image from 'next/image'
 import styles from './Book.module.sass'
 
 const FALLBACK_URL = 'https://bulma.io/images/placeholders/320x480.png'
 
-export default function Book({ book }) {
+export default function Book({ className, book }) {
   return (
-    <div className={classnames('is-inline-block', styles.book)}>
+    <div className={className}>
       <div className="has-text-centered">
-        <Image height={240} width={160} src={book.img || FALLBACK_URL} />
+        <figure className="image is-2by3">
+          <img src={book.img || FALLBACK_URL} alt="cover image" />
+        </figure>
       </div>
 
-      <div className="content is-small">
+      <div className="content is-small py-1">
         <h5 title={book.title} className={classnames('m-0', styles.overflow)}>
           <i>{book.title}</i>
         </h5>

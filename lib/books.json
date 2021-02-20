@@ -24,22 +24,6 @@
     "summary": "Shape Up is for product development teams who struggle to ship.\n\nFull of eye-opening insights, Shape Up will help you break free of \"best practices\" that aren't working, think deeper about the right problems, and start shipping meaningful projects."
   },
   {
-    "id": 4,
-    "title": "Programming as Theory Building",
-    "author": "Peter Naur",
-    "state": "completed",
-    "url": "http://pages.cs.wisc.edu/~remzi/Naur.pdf",
-    "summary": ""
-  },
-  {
-    "id": 5,
-    "title": "The Big Ball of Mud",
-    "author": "Jospeh Yoder",
-    "state": "new",
-    "url": "https://joeyoder.com/PDFs/mud.pdf",
-    "summary": "While much attention has been focused on high-level software architectural patterns, what is, in effect, the de-facto standard software architecture is seldom discussed. This paper examines this most frequently deployed of software architectures: the BIG BALL OF MUD. A BIG BALL OF MUD is a casually, even haphazardly, structured system. Its organization, if one can call it that, is dictated more by expediency than design. Yet, its enduring popularity cannot merely be indicative of a general disregard for architecture."
-  },
-  {
     "id": 7,
     "title": "Clean Architecture",
     "author": "Carol Nichols",
@@ -61,30 +45,6 @@
     "author": "Martin Fowler",
     "state": "new",
     "url": "https://martinfowler.com/articles/branching-patterns.html",
-    "summary": ""
-  },
-  {
-    "id": 10,
-    "title": "Fluent Interfaces",
-    "author": "Martin Fowler",
-    "state": "completed",
-    "url": "https://www.martinfowler.com/bliki/FluentInterface.html",
-    "summary": ""
-  },
-  {
-    "id": 11,
-    "title": "Presentation-Domain-Data Layering",
-    "author": "Martin Fowler",
-    "state": "completed",
-    "url": "https://www.martinfowler.com/bliki/PresentationDomainDataLayering.html",
-    "summary": ""
-  },
-  {
-    "id": 12,
-    "title": "Who Needs an Architect?",
-    "author": "Martin Fowler",
-    "state": "new",
-    "url": "https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf",
     "summary": ""
   },
   {
@@ -126,22 +86,6 @@
     "state": "new",
     "url": "https://bigmachine.io/products/the-imposters-handbook/",
     "summary": ""
-  },
-  {
-    "id": 18,
-    "title": "Micro Frontends",
-    "author": "Martin Fowler",
-    "state": "new",
-    "url": "https://martinfowler.com/articles/micro-frontends.html",
-    "summary": ""
-  },
-  {
-    "id": 19,
-    "title": "How to do a code review",
-    "author": "Google Engineering Practices",
-    "state": "new",
-    "url": "https://google.github.io/eng-practices/review/reviewer/",
-    "summary": "Google has many generalized engineering practices that cover all languages and all projects. These documents represent our collective experience of various best practices that we have developed over time."
   },
   {
     "id": 20,
