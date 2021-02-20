@@ -1,13 +1,13 @@
 import Book from './Book'
+import Carousel from './Carousel'
 
 export default function BookList({ books }) {
+  // TODO: Carousel is desktop-only, or make 3 books for mobile
   return (
-    <ul className="columns">
-      {books.slice(0, 5).map(book => (
-        <li className="column is-one-fifth" key={book.id}>
-          <Book book={book} />
-        </li>
+    <Carousel>
+      {books.map(book => (
+        <Book key={book.id} book={book} />
       ))}
-    </ul>
+    </Carousel>
   )
 }
