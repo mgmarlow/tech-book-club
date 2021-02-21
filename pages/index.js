@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import SEO from '../components/SEO'
 import Footer from '../components/Footer'
+import { DISCORD_INVITE_URL } from '../constants/env'
 
 const AboutSection = () => {
   return (
@@ -92,9 +93,11 @@ const Hero = () => {
           </p>
 
           <div>
-            <button className="button has-text-weight-bold is-primary">
-              Join the discord
-            </button>
+            <Link href={DISCORD_INVITE_URL}>
+              <button className="button has-text-weight-bold is-primary">
+                Join the discord
+              </button>
+            </Link>
 
             <Link href="/books">
               <button className="button is-ghost has-text-dark">

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import classnames from 'classnames'
+import { DISCORD_INVITE_URL } from '../constants/env'
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false)
@@ -41,10 +42,7 @@ export default function Nav() {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a
-                href="https://discord.gg/Ubd43fUq52"
-                className="button is-primary"
-              >
+              <a href={DISCORD_INVITE_URL} className="button is-primary">
                 <strong>Join the Discord</strong>
               </a>
             </div>
