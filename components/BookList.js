@@ -1,13 +1,16 @@
 import Book from './Book'
-import Carousel from './Carousel'
 
 export default function BookList({ books }) {
-  // TODO: Carousel is desktop-only, or make 3 books for mobile
   return (
-    <Carousel>
+    <ul className="columns is-mobile is-multiline">
       {books.map(book => (
-        <Book key={book.id} book={book} />
+        <li
+          className="column is-2-desktop is-3-tablet is-4-mobile"
+          key={book.id}
+        >
+          <Book key={book.id} book={book} />
+        </li>
       ))}
-    </Carousel>
+    </ul>
   )
 }
