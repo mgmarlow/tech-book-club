@@ -1,5 +1,6 @@
 import remark from 'remark'
 import html from 'remark-html'
+import Layout from '../../components/Layout'
 import { getAllBooks, getBookBySlug } from '../../lib/books'
 import { getNotesBySlug } from '../../lib/notes'
 
@@ -32,11 +33,18 @@ export async function getStaticPaths() {
 
 export default function Notes({ book, notesContent }) {
   return (
-    <>
-      <h1>{book.title}</h1>
-      {notesContent && (
-        <div dangerouslySetInnerHTML={{ __html: notesContent }}></div>
-      )}
-    </>
+    <Layout>
+      <div className="container">
+        <div className="content is-medium">
+          <section className="section">
+            <h1>{book.title}</h1>
+
+            {notesContent && (
+              <div dangerouslySetInnerHTML={{ __html: notesContent }}></div>
+            )}
+          </section>
+        </div>
+      </div>
+    </Layout>
   )
 }
