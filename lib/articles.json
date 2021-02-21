@@ -16,6 +16,14 @@
     "summary": "While much attention has been focused on high-level software architectural patterns, what is, in effect, the de-facto standard software architecture is seldom discussed. This paper examines this most frequently deployed of software architectures: the BIG BALL OF MUD. A BIG BALL OF MUD is a casually, even haphazardly, structured system. Its organization, if one can call it that, is dictated more by expediency than design. Yet, its enduring popularity cannot merely be indicative of a general disregard for architecture."
   },
   {
+    "id": 9,
+    "title": "Patterns for Managing Source Code Branches",
+    "author": "Martin Fowler",
+    "state": "new",
+    "url": "https://martinfowler.com/articles/branching-patterns.html",
+    "summary": ""
+  },
+  {
     "id": 10,
     "title": "Fluent Interfaces",
     "author": "Martin Fowler",
