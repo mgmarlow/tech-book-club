@@ -1,5 +1,4 @@
 import classnames from 'classnames'
-import Image from 'next/image'
 import Link from 'next/link'
 import SEO from '../components/SEO'
 import Footer from '../components/Footer'
@@ -28,7 +27,7 @@ const AboutSection = () => {
           </div>
 
           <div className="column has-text-centered">
-            <Image src="/assets/book_lover_flat.svg" height={500} width={500} />
+            <img src="/assets/book_lover_flat.svg" height={500} width={500} />
           </div>
         </div>
       </div>
@@ -43,7 +42,7 @@ const AddBookSection = () => {
         <div className="columns is-vcentered">
           {/* Flip the image order on mobile to prevent back-to-back images */}
           <div className="column is-hidden-mobile">
-            <Image src="/assets/bookshelves.svg" height={500} width={500} />
+            <img src="/assets/bookshelves.svg" height={500} width={500} />
           </div>
 
           <div className="column is-half-desktop is-two-thirds-tablet">
@@ -77,7 +76,7 @@ const AddBookSection = () => {
 
             {/* Flip the image order on mobile to prevent back-to-back images */}
             <div className="column is-hidden-tablet has-text-centered">
-              <Image src="/assets/bookshelves.svg" height={500} width={500} />
+              <img src="/assets/bookshelves.svg" height={500} width={500} />
             </div>
           </div>
         </div>
