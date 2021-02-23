@@ -28,7 +28,9 @@ export default function Books({ books }) {
               <hr />
               <BookList books={completedBooks} />
             </div>
+          </section>
 
+          <section className="section">
             <div>
               <h2 className="is-size-2">Queued</h2>
               <hr />
