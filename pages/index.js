@@ -52,24 +52,24 @@ const AddBookSection = () => {
               <p>
                 Submit a pull request to{' '}
                 <a href="https://github.com/mgmarlow/tech-book-club/blob/master/lib/books.json">
-                  <code>books.json</code>
+                  books.json
                 </a>
-                . Here are some guidelines for picking books well-suited to the
-                club:
+                . Here are some guidelines:
               </p>
               <ul>
+                <li>
+                  <p>
+                    suggest books you <em>want</em> to read, not ones you{' '}
+                    <em>should</em> read
+                  </p>
+                </li>
                 <li>
                   <p>choose books that relate to software development</p>
                 </li>
                 <li>
                   <p>
-                    consider books that are available on{' '}
+                    consider free books, or ones available on{' '}
                     <a href="https://learning.oreilly.com/home/">O'Reilly</a>
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    read the table of contents to get an idea for the outline
                   </p>
                 </li>
               </ul>
