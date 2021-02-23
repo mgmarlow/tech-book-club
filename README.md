@@ -1,31 +1,19 @@
-# [Tech Book Club](https://techbookclub.dev/)
+# tech book club
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/94b28e10-c085-4c2d-8f33-5c246be50f62/deploy-status)](https://app.netlify.com/sites/wizardly-shannon-f69850/deploys)
+## Installation
 
-## Development
+Install dependencies
 
-Clone and install dependencies:
-
-```
-gh repo clone mgmarlow/tech-book-club
-cd ./tech-book-club
+```bash
 yarn
 ```
 
-The book list is fetched from Airtable during compilation. In order to run the application, you need to add a `.env` file to the root directory of the project:
+Run the server
 
-```
-AT_API_URL=
-AT_BASE_ID=
-AT_API_KEY=
+```bash
+yarn dev
 ```
 
-Reach out to me for the application credentials.
+## Kudos
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/mgmarlow/tech-book-club.
-
-## License
-
-Licensed under the [0BSD License](https://opensource.org/licenses/0BSD).
+- [undraw](https://undraw.co/) for SVG illustrations

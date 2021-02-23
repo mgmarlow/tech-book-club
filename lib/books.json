@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "title": "Clean Agile: Back to Basics",
+    "author": "Robert C. Martin",
+    "state": "completed",
+    "url": "https://learning.oreilly.com/library/view/clean-agile-back/9780135782002/",
+    "summary": "",
+    "img": "https://learning.oreilly.com/library/cover/9780135782002/"
+  },
+  {
+    "id": 2,
+    "title": "Accelerate: The Science of Lean Software and DevOps",
+    "author": "Nicole Forsgren, Jez Humble, Gene Kim",
+    "state": "new",
+    "url": "https://learning.oreilly.com/library/view/accelerate/9781457191435/",
+    "summary": "Accelerate your organization to win in the marketplace.\n\n\nHow can we apply technology to drive business value? For years, we've been told that the performance of software delivery teams doesn't matter―that it can't provide a competitive advantage to our companies. Through four years of groundbreaking research to include data collected from the State of DevOps reports conducted with Puppet, Dr. Nicole Forsgren, Jez Humble, and Gene Kim set out to find a way to measure software delivery performance―and what drives it―using rigorous statistical methods. This book presents both the findings and the science behind that research, making the information accessible for readers to apply in their own organizations.\n\nReaders will discover how to measure the performance of their teams, and what capabilities they should invest in to drive higher performance. This book is ideal for management at every level.",
+    "img": "https://learning.oreilly.com/library/cover/9781457191435/"
+  },
+  {
+    "id": 3,
+    "title": "Shape Up: Stop Running in Circles and Ship Work that Matters",
+    "author": "Ryan Singer",
+    "state": "completed",
+    "url": "https://basecamp.com/shapeup",
+    "summary": "Shape Up is for product development teams who struggle to ship.\n\nFull of eye-opening insights, Shape Up will help you break free of \"best practices\" that aren't working, think deeper about the right problems, and start shipping meaningful projects.",
+    "img": "https://basecamp.com/assets/books/shapeup-cover-black-2ad6153d1627246e9e93cd19f08fe94ca9d75fc09c17951ac33f7bf955a74e59.svg"
+  },
+  {
+    "id": 7,
+    "title": "Clean Architecture",
+    "author": "Carol Nichols",
+    "state": "new",
+    "url": "https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/",
+    "summary": "",
+    "img": "https://learning.oreilly.com/library/cover/9780134494272/"
+  },
+  {
+    "id": 8,
+    "title": "Thinking in Systems: A Primer",
+    "author": "Donella H. Meadows",
+    "state": "new",
+    "url": "https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557",
+    "summary": "Thinking in Systems, is a concise and crucial book offering insight for problem solving on scales ranging from the personal to the global. Edited by the Sustainability Institute’s Diana Wright, this essential primer brings systems thinking out of the realm of computers and equations and into the tangible world, showing readers how to develop the systems-thinking skills that thought leaders across the globe consider critical for 21st-century life.",
+    "img": "https://covers.openlibrary.org/b/id/8166043-M.jpg"
+  },
+  {
+    "id": 13,
+    "title": "The DevOps Handbook",
+    "author": "Gene Kim",
+    "state": "new",
+    "url": "https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002",
+    "summary": "Increase profitability, elevate work culture, and exceed productivity goals through DevOps practices.\n\nMore than ever, the effective management of technology is critical for business competitiveness. For decades, technology leaders have struggled to balance agility, reliability, and security. The consequences of failure have never been greater―whether it's the healthcare.gov debacle, cardholder data breaches, or missing the boat with Big Data in the cloud."
+  },
+  {
+    "id": 14,
+    "title": "Domain-Driven Design: Tackling Complexity in the Heart of Software",
+    "author": "Eric Evans",
+    "state": "completed",
+    "url": "https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/",
+    "summary": "The software development community widely acknowledges that domain modeling is central to software design. Through domain models, software developers are able to express rich functionality and translate it into a software implementation that truly serves the needs of its users. But despite its obvious importance, there are few practical resources that explain how to incorporate effective domain modeling into the software development process.\n\nDomain-Driven Design fills that need. This is not a book about specific technologies. It offers readers a systematic approach to domain-driven design, presenting an extensive set of design best practices, experience-based techniques, and fundamental principles that facilitate the development of software projects facing complex domains. Intertwining design and development practice, this book incorporates numerous examples based on actual projects to illustrate the application of domain-driven design to real-world software development.\n\nReaders learn how to use a domain model to make a complex development effort more focused and dynamic. A core of best practices and standard patterns provides a common language for the development team. A shift in emphasis—refactoring not just the code but the model underlying the code—in combination with the frequent iterations of Agile development leads to deeper insight into domains and enhanced communication between domain expert and programmer. Domain-Driven Design then builds on this foundation, and addresses modeling and design for complex systems and larger organizations.",
+    "img": "https://learning.oreilly.com/library/cover/0321125215/"
+  },
+  {
+    "id": 15,
+    "title": "Patterns of Enterprise Application Architecture",
+    "author": "Martin Fowler",
+    "state": "new",
+    "url": "https://learning.oreilly.com/library/view/patterns-of-enterprise/0321127420/",
+    "summary": "Patterns of Enterprise Application Architecture is written in direct response to the stiff challenges that face enterprise application developers. The author, noted object-oriented designer Martin Fowler, noticed that despite changes in technology--from Smalltalk to CORBA to Java to .NET--the same basic design ideas can be adapted and applied to solve common problems. With the help of an expert group of contributors, Martin distills over forty recurring solutions into patterns. The result is an indispensable handbook of solutions that are applicable to any enterprise application platform.",
+    "img": "https://learning.oreilly.com/library/cover/0321127420/"
+  },
+  {
+    "id": 16,
+    "title": "Beyond Software Architecture: Creating and Sustaining Winning Solutions",
+    "author": "Luke Hohmann",
+    "state": "new",
+    "url": "https://learning.oreilly.com/library/view/beyond-software-architecture/0201775948/",
+    "summary": "",
+    "img": "https://learning.oreilly.com/library/cover/0201775948/"
+  },
+  {
+    "id": 17,
+    "title": "The Imposter's Handbook",
+    "author": "Rob Cornery",
+    "state": "new",
+    "url": "https://bigmachine.io/products/the-imposters-handbook/",
+    "summary": ""
+  },
+  {
+    "id": 20,
+    "title": "Hackers & Painters",
+    "author": "Paul Graham",
+    "state": "new",
+    "url": "https://learning.oreilly.com/library/view/hackers-painters/0596006624/",
+    "summary": "A collection of Paul Graham's essays.",
+    "img": "https://learning.oreilly.com/library/cover/0596006624/"
+  },
+  {
+    "id": 21,
+    "title": "Algorithms",
+    "author": "Jeff Erickson",
+    "state": "new",
+    "url": "http://jeffe.cs.illinois.edu/teaching/algorithms/",
+    "summary": "A free text from a professor of computer science at the University of Illinois, Urbana-Champaign.",
+    "img": "http://jeffe.cs.illinois.edu/teaching/algorithms/FrontCover.png"
+  }
+]
