@@ -1,34 +1,34 @@
+import classnames from 'classnames'
 import Image from 'next/image'
 import Link from 'next/link'
 import SEO from '../components/SEO'
 import Footer from '../components/Footer'
 import { DISCORD_INVITE_URL } from '../constants/env'
+import styles from './index.module.sass'
 
 const AboutSection = () => {
   return (
-    <section className="section is-medium">
+    <section className="section is-large">
       <div className="container">
         <div className="columns is-vcentered">
-          <div className="column is-half">
+          <div className="column is-half-desktop is-two-thirds-tablet">
             <div className="content is-medium">
               <h2>What's it all about?</h2>
               <p>
-                Each week we discuss assigned reading with the goal of analyzing
-                it for better understanding. Occasionally we'll conduct
-                workshops or demos as practical exercises to compliment what
-                we've read.
+                Learning is more fun with friends. Tech Book Club is an
+                opportunity to apply theory, challenge ideas, and study in a
+                friendly environment.
               </p>
-
-              <p>These are the sorts of questions we like to ask:</p>
-
-              <ul>
-                <li>
-                  What is the central idea the author wants to get across?
-                </li>
-                <li>What arguments support or detract from their argument?</li>
-                <li>Have you applied similar techniques in your experience?</li>
-              </ul>
+              <p>
+                Join our weekly discussion sessions held on{' '}
+                <strong>Wednesdays at 4:30 PST</strong>. All you need to get
+                started is a few questions and a copy of the book.
+              </p>
             </div>
+          </div>
+
+          <div className="column has-text-centered">
+            <Image src="/assets/book_lover_flat.svg" height={500} width={500} />
           </div>
         </div>
       </div>
@@ -38,16 +38,17 @@ const AboutSection = () => {
 
 const AddBookSection = () => {
   return (
-    <section className="section is-medium">
+    <section className="section is-large is-mobile">
       <div className="container">
         <div className="columns is-vcentered">
-          <div className="column">
-            <Image src="/assets/book_lover_flat.svg" height={500} width={500} />
+          {/* Flip the image order on mobile to prevent back-to-back images */}
+          <div className="column is-hidden-mobile">
+            <Image src="/assets/bookshelves.svg" height={500} width={500} />
           </div>
 
           <div className="column is-half-desktop is-two-thirds-tablet">
             <div className="content is-medium">
-              <h2>Want to add a book?</h2>
+              <h2>Want to suggest a book?</h2>
               <p>
                 Submit a pull request to{' '}
                 <a href="#">
@@ -72,6 +73,11 @@ const AddBookSection = () => {
                   </p>
                 </li>
               </ul>
+            </div>
+
+            {/* Flip the image order on mobile to prevent back-to-back images */}
+            <div className="column is-hidden-tablet has-text-centered">
+              <Image src="/assets/bookshelves.svg" height={500} width={500} />
             </div>
           </div>
         </div>
@@ -118,7 +124,9 @@ export default function Home() {
 
       <main>
         <Hero />
+        <hr className={classnames('is-hidden-touch', styles.hr)} />
         <AboutSection />
+        <hr className={classnames('is-hidden-touch', styles.hr)} />
         <AddBookSection />
       </main>
 
