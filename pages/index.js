@@ -51,7 +51,7 @@ const AddBookSection = () => {
               <h2>Want to suggest a book?</h2>
               <p>
                 Submit a pull request to{' '}
-                <a href="#">
+                <a href="https://github.com/mgmarlow/tech-book-club/blob/master/lib/books.json">
                   <code>books.json</code>
                 </a>
                 . Here are some guidelines for picking books well-suited to the

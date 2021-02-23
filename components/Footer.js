@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="content has-text-centered">
         <p>
           <strong>Tech Book Club</strong> by Graham Marlow. Check out the{' '}
-          <a href="#">source code</a>.
+          <a href="https://github.com/mgmarlow/tech-book-club">source code</a>.
         </p>
       </div>
     </footer>
