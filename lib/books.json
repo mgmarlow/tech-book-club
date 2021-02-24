@@ -101,8 +101,8 @@
     "title": "Algorithms",
     "author": "Jeff Erickson",
     "state": "new",
-    "url": "http://jeffe.cs.illinois.edu/teaching/algorithms/",
+    "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/",
     "summary": "A free text from a professor of computer science at the University of Illinois, Urbana-Champaign.",
-    "img": "http://jeffe.cs.illinois.edu/teaching/algorithms/FrontCover.png"
+    "img": "https://jeffe.cs.illinois.edu/teaching/algorithms/FrontCover.png"
   }
 ]
