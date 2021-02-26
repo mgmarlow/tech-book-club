@@ -104,5 +104,24 @@
     "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/",
     "summary": "A free text from a professor of computer science at the University of Illinois, Urbana-Champaign.",
     "img": "https://jeffe.cs.illinois.edu/teaching/algorithms/FrontCover.png"
+  },
+  {
+    "id": 22,
+    "title": "Scrum: The Art of Doing Twice the Work in Half the Time",
+    "author": "Jeff Sutherland, J.J. Sutherland ",
+    "state": "new",
+    "url": "https://www.indiebound.org/book/9780385346450",
+    "summary": "For those who believe that there must be a more agile and efficient way for people to get things done, here is a brilliantly discursive, thought-provoking book about the leadership and management process that is changing the way we live.",
+    "img": "https://34slpa7u66f159hfp1fhl9aur1-wpengine.netdna-ssl.com/wp-content/uploads/2013/10/new-book-cover-610x928.jpg"
+  },
+  {
+    "id": 23,
+    "title": "General Systemantics",
+    "author": "John Gall",
+    "state": "new",
+    "url": "https://www.amazon.com/Systems-Bible-Beginners-Guide-Large/dp/0961825170/",
+    "summary": "a systems engineering treatise by John Gall in which he offers practical principles of systems design based on experience and anecdotes.",
+    "img": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Systemantics.jpg/220px-Systemantics.jpg"
   }
+  
 ]
