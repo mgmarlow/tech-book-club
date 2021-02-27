@@ -40,7 +40,7 @@
     "title": "Thinking in Systems: A Primer",
     "author": "Donella H. Meadows",
     "state": "new",
-    "url": "https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557",
+    "url": "https://bookshop.org/books/thinking-in-systems-international-bestseller/9781603580557",
     "summary": "Thinking in Systems, is a concise and crucial book offering insight for problem solving on scales ranging from the personal to the global. Edited by the Sustainability Institute’s Diana Wright, this essential primer brings systems thinking out of the realm of computers and equations and into the tangible world, showing readers how to develop the systems-thinking skills that thought leaders across the globe consider critical for 21st-century life.",
     "img": "https://covers.openlibrary.org/b/id/8166043-M.jpg"
   },
@@ -49,7 +49,7 @@
     "title": "The DevOps Handbook",
     "author": "Gene Kim",
     "state": "new",
-    "url": "https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002",
+    "url": "https://bookshop.org/books/the-devops-handbook-how-to-create-world-class-agility-reliability-and-security-in-technology-organizations-9781942788003/9781942788003",
     "summary": "Increase profitability, elevate work culture, and exceed productivity goals through DevOps practices.\n\nMore than ever, the effective management of technology is critical for business competitiveness. For decades, technology leaders have struggled to balance agility, reliability, and security. The consequences of failure have never been greater―whether it's the healthcare.gov debacle, cardholder data breaches, or missing the boat with Big Data in the cloud."
   },
   {
@@ -123,5 +123,4 @@
     "summary": "a systems engineering treatise by John Gall in which he offers practical principles of systems design based on experience and anecdotes.",
     "img": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Systemantics.jpg/220px-Systemantics.jpg"
   }
-  
 ]

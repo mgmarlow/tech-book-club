@@ -16,6 +16,15 @@ Run the server
 yarn dev
 ```
 
+## Adding books
+
+Add books to the Tech Book Club reading list by creating entries in [`lib/books.json`](./lib/books.json). Use the `"state": "new"` field to add them to the queue.
+
+Consider these alternatives to Amazon:
+
+- [bookshop.org](https://bookshop.org/)
+- [indiebound.org](https://www.indiebound.org/)
+
 ## Kudos
 
 - [undraw](https://undraw.co/) for SVG illustrations
