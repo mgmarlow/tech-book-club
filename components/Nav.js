@@ -10,9 +10,7 @@ export default function Nav() {
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <Link href="/">
-          <a className="is-size-3 has-text-weight-bold navbar-item">
-            Tech Book Club
-          </a>
+          <a className="navbar-item">📚 tech book club</a>
         </Link>
 
         <a
@@ -35,7 +33,15 @@ export default function Nav() {
       >
         <div className="navbar-start">
           <Link href="/books">
-            <a className="navbar-item">Books</a>
+            <a className="navbar-item has-text-weight-bold">books</a>
+          </Link>
+
+          <Link href="/about">
+            <a className="navbar-item has-text-weight-bold">about</a>
+          </Link>
+
+          <Link href="https://github.com/mgmarlow/tech-book-club">
+            <a className="navbar-item has-text-weight-bold">source ↗</a>
           </Link>
         </div>
 
@@ -43,7 +49,7 @@ export default function Nav() {
           <div className="navbar-item">
             <div className="buttons">
               <a href={DISCORD_INVITE_URL} className="button is-primary">
-                <strong>Join the Discord</strong>
+                <strong>discord ↗</strong>
               </a>
             </div>
           </div>

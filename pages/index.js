@@ -3,6 +3,7 @@ import Link from 'next/link'
 import SEO from '../components/SEO'
 import Footer from '../components/Footer'
 import { DISCORD_INVITE_URL } from '../constants/env'
+import Nav from '../components/Nav'
 import styles from './index.module.sass'
 
 const AboutSection = () => {
@@ -119,6 +120,7 @@ const Hero = () => {
 export default function Home() {
   return (
     <>
+      <Nav />
       <SEO />
 
       <main>
