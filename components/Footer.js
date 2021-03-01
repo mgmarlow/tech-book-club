@@ -26,7 +26,7 @@ export default function Footer() {
         </p>
       </div>
 
-      <div className="columns is-centered">
+      <div className="columns is-centered is-mobile">
         <div className="column is-narrow mr-5">
           <ul>
             <FooterLink href="/about">about</FooterLink>
