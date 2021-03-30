@@ -50,7 +50,8 @@
     "author": "Gene Kim",
     "state": "new",
     "url": "https://bookshop.org/books/the-devops-handbook-how-to-create-world-class-agility-reliability-and-security-in-technology-organizations-9781942788003/9781942788003",
-    "summary": "Increase profitability, elevate work culture, and exceed productivity goals through DevOps practices.\n\nMore than ever, the effective management of technology is critical for business competitiveness. For decades, technology leaders have struggled to balance agility, reliability, and security. The consequences of failure have never been greater―whether it's the healthcare.gov debacle, cardholder data breaches, or missing the boat with Big Data in the cloud."
+    "summary": "Increase profitability, elevate work culture, and exceed productivity goals through DevOps practices.\n\nMore than ever, the effective management of technology is critical for business competitiveness. For decades, technology leaders have struggled to balance agility, reliability, and security. The consequences of failure have never been greater―whether it's the healthcare.gov debacle, cardholder data breaches, or missing the boat with Big Data in the cloud.",
+    "img": "https://images-production.bookshop.org/spree/images/attachments/4935487/original/9781942788003.jpg?1588124592"
   },
   {
     "id": 14,
@@ -83,18 +84,10 @@
     "id": 17,
     "title": "The Imposter's Handbook",
     "author": "Rob Cornery",
-    "state": "new",
+    "state": "in_progress",
     "url": "https://bigmachine.io/products/the-imposters-handbook/",
-    "summary": ""
-  },
-  {
-    "id": 20,
-    "title": "Hackers & Painters",
-    "author": "Paul Graham",
-    "state": "new",
-    "url": "https://learning.oreilly.com/library/view/hackers-painters/0596006624/",
-    "summary": "A collection of Paul Graham's essays.",
-    "img": "https://learning.oreilly.com/library/cover/0596006624/"
+    "summary": "",
+    "img": "https://bigmachine.io/img/covers/season_1_2_cover.jpg"
   },
   {
     "id": 21,

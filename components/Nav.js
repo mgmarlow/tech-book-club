@@ -36,9 +36,9 @@ export default function Nav() {
             <a className="navbar-item has-text-weight-bold">books</a>
           </Link>
 
-          <Link href="/about">
+          {/* <Link href="/about">
             <a className="navbar-item has-text-weight-bold">about</a>
-          </Link>
+          </Link> */}
 
           <Link href="https://github.com/mgmarlow/tech-book-club">
             <a className="navbar-item has-text-weight-bold">source ↗</a>

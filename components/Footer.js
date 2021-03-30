@@ -14,7 +14,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="content has-text-centered">
         <p>
-          <strong>Tech Book Club</strong> by Graham Marlow. Source code licensed
+          <strong>tech book club</strong> by Graham Marlow. Source code licensed
           by{' '}
           <a
             className="has-text-dark"
