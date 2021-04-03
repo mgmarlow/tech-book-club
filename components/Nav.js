@@ -36,6 +36,10 @@ export default function Nav() {
             <a className="navbar-item has-text-weight-bold">books</a>
           </Link>
 
+          <Link href="https://www.notion.so/Discussions-0368f123f3c94c458b694d5cac6f1074">
+            <a className="navbar-item has-text-weight-bold">discussions ↗</a>
+          </Link>
+
           {/* <Link href="/about">
             <a className="navbar-item has-text-weight-bold">about</a>
           </Link> */}

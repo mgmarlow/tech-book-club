@@ -29,8 +29,10 @@ export default function Footer() {
       <div className="columns is-centered is-mobile">
         <div className="column is-narrow mr-5">
           <ul>
-            <FooterLink href="/about">about</FooterLink>
             <FooterLink href="/books">books</FooterLink>
+            <FooterLink href="https://www.notion.so/Discussions-0368f123f3c94c458b694d5cac6f1074">
+              discussions ↗
+            </FooterLink>
           </ul>
         </div>
         <div className="column is-narrow">
