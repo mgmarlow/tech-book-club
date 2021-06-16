@@ -115,5 +115,14 @@
     "url": "https://www.amazon.com/Systems-Bible-Beginners-Guide-Large/dp/0961825170/",
     "summary": "a systems engineering treatise by John Gall in which he offers practical principles of systems design based on experience and anecdotes.",
     "img": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Systemantics.jpg/220px-Systemantics.jpg"
+  },
+  {
+    "id": 24,
+    "title": "Practical Object-Oriented Design: An Agile Primer Using Ruby",
+    "author": "Sandi Metz",
+    "state": "new",
+    "url": "https://bookshop.org/books/practical-object-oriented-design-an-agile-primer-using-ruby/9780134456478",
+    "summary": "The Complete Guide to Writing Maintainable, Manageable, Pleasing, and Powerful Object-Oriented Applications",
+    "img": "https://images-production.bookshop.org/spree/images/attachments/6693694/original/9780134456478.jpg"
   }
 ]
