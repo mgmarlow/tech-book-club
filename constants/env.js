@@ -1,1 +1,2 @@
-export const DISCORD_INVITE_URL = 'https://discord.gg/Ubd43fUq52'
+export const DISCORD_INVITE_URL =
+  'mailto: mgmarlow@hey.com?subject=Request to Join Tech Book Club'
