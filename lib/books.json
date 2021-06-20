@@ -84,7 +84,7 @@
     "id": 17,
     "title": "The Imposter's Handbook",
     "author": "Rob Cornery",
-    "state": "in_progress",
+    "state": "completed",
     "url": "https://bigmachine.io/products/the-imposters-handbook/",
     "summary": "",
     "img": "https://bigmachine.io/img/covers/season_1_2_cover.jpg"
@@ -111,7 +111,7 @@
     "id": 23,
     "title": "General Systemantics",
     "author": "John Gall",
-    "state": "new",
+    "state": "in_progress",
     "url": "https://www.amazon.com/Systems-Bible-Beginners-Guide-Large/dp/0961825170/",
     "summary": "a systems engineering treatise by John Gall in which he offers practical principles of systems design based on experience and anecdotes.",
     "img": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Systemantics.jpg/220px-Systemantics.jpg"
