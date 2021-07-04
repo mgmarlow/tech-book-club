@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import SEO from '../components/SEO'
-import Footer from '../components/Footer'
-import { DISCORD_INVITE_URL } from '../constants/env'
-import Nav from '../components/Nav'
 import Book from '../components/Book'
+import Footer from '../components/Footer'
+import Nav from '../components/Nav'
+import SEO from '../components/SEO'
+import { DISCORD_INVITE_URL } from '../constants/env'
 import { getAllBooks } from '../lib/books'
 
 export async function getStaticProps() {
@@ -33,6 +33,18 @@ export default function Home({ currentBook }) {
 
       <Footer />
     </>
+  )
+}
+
+function ToggleSection({ className, header, children }) {
+  return (
+    <details className={className}>
+      <summary>
+        <span className="has-text-weight-bold">{header}</span>
+      </summary>
+
+      <div className="py-2">{children}</div>
+    </details>
   )
 }
 
@@ -103,40 +115,45 @@ function FAQ() {
       <div className="content is-medium">
         <h2 id="faq">FAQ</h2>
 
-        <div className="mt-3 mb-6">
-          <h5>What goes into a discussion?</h5>
+        <ToggleSection className="my-2" header="What goes into a discussion?">
           <p>
-            We begin discussions with a brief (5-10 minutes) summary of the
-            reading. Afterwards, we ask questions aimed at improving our
-            understanding of the author's main points.
+            tech book club is built on community discussions. Here are some tips
+            to help you contribute to our weekly sessions:
           </p>
-          <p>
-            For more technical books, we use{' '}
-            <a href="https://gist.github.com/">gists</a> to review code and
-            discuss practical applications. Check out{' '}
-            <a href="https://gist.github.com/mgmarlow/1bc04546aba5e71508fb5a916560e5e1">
-              some
-            </a>{' '}
-            <a href="https://gist.github.com/mgmarlow/b2cc4a07349ed1e67b44f0f17a815a0b">
-              examples
-            </a>{' '}
-            from past discussions.
-          </p>
-        </div>
+          <ul>
+            <li>Don't summarize the reading, we all read the chapter!</li>
+            <li>
+              Come prepared with a questions you'd like to ask the group, or a
+              code snippet you'd like to demo.
+            </li>
+            <li>
+              Expand on the book content by applying it to your personal
+              experience. Think about where you've seen the techniques work or
+              fail, alternatives that you've considered, or examples of how
+              you've applied similar methods.
+            </li>
+            <li>
+              Note areas where the author explained something well, or wrote
+              something that resonated with you.
+            </li>
+          </ul>
+        </ToggleSection>
 
-        <div className="my-6">
-          <h5>Can I still attend the discussion if I missed the reading?</h5>
+        <ToggleSection
+          className="my-2"
+          header="Can I still attend if I missed the reading?"
+        >
           <p>
             Yes! Your contributions are still valuable even if you missed a
             chapter or two.
           </p>
-        </div>
+        </ToggleSection>
 
-        <div className="my-6">
-          <h5>
-            A billion note-taking apps came out in 2020. What do the cool kids
-            use?
-          </h5>
+        <ToggleSection
+          className="my-2"
+          header="There are billions of note-taking apps. What do the cool kids
+            use?"
+        >
           <p>
             <a href="https://notion.so/">Notion</a> is my personal favorite, but
             some other great alternatives are{' '}
@@ -144,7 +161,7 @@ function FAQ() {
             <a href="https://foambubble.github.io/foam/">Foam</a>, and{' '}
             <a href="https://www.zettlr.com/">Zettlr</a>.
           </p>
-        </div>
+        </ToggleSection>
       </div>
     </section>
   )
@@ -165,17 +182,21 @@ function AddBookSection() {
         <ul>
           <li>
             <p>
-              suggest books you <em>want</em> to read, not ones you{' '}
-              <em>should</em> read
+              Suggest books you <em>want</em> to read, not ones you{' '}
+              <em>should</em> read.
             </p>
           </li>
           <li>
-            <p>choose books that relate to software development</p>
+            <p>
+              Choose books that relate to the field of software development.
+              Books don't need to be about programming, but they should be
+              applicable to the field.
+            </p>
           </li>
           <li>
             <p>
-              consider free books, or ones available on{' '}
-              <a href="https://learning.oreilly.com/home/">O'Reilly</a>
+              Help the voting process by listing a few reasons you want to read
+              the book.
             </p>
           </li>
         </ul>
