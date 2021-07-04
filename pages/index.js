@@ -121,9 +121,9 @@ function FAQ() {
             to help you contribute to our weekly sessions:
           </p>
           <ul>
-            <li>Don't summarize the reading, we all read the chapter!</li>
+            <li>Don't summarize the reading, we've already read it!</li>
             <li>
-              Come prepared with a questions you'd like to ask the group, or a
+              Come prepared with a question you'd like to ask the group, or a
               code snippet you'd like to demo.
             </li>
             <li>
@@ -160,6 +160,32 @@ function FAQ() {
             <a href="https://obsidian.md/">Obsidian</a>,{' '}
             <a href="https://foambubble.github.io/foam/">Foam</a>, and{' '}
             <a href="https://www.zettlr.com/">Zettlr</a>.
+          </p>
+        </ToggleSection>
+
+        <ToggleSection
+          className="my-2"
+          header="How can I help improve tech book club?"
+        >
+          <p>
+            Found a bug or have suggestions?{' '}
+            <a href="https://github.com/mgmarlow/tech-book-club/issues">
+              File an issue
+            </a>
+            .
+          </p>
+          <p>
+            tech book club is an open source project licensed under{' '}
+            <a href="https://opensource.org/licenses/GPL-3.0">GPL-3.0</a>.
+            Please feel welcome to read the{' '}
+            <a href="https://github.com/mgmarlow/tech-book-club/blob/master/CONTRIBUTING.md">
+              contributing guide
+            </a>{' '}
+            and submit a{' '}
+            <a href="https://github.com/mgmarlow/tech-book-club/pulls">
+              pull request
+            </a>
+            .
           </p>
         </ToggleSection>
       </div>
