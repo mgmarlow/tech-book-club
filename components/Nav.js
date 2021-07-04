@@ -43,10 +43,6 @@ export default function Nav() {
           <Link href="https://www.notion.so/Study-Groups-2f393067ee9946d3990a117093443af6">
             <a className="navbar-item has-text-weight-bold">study groups ↗</a>
           </Link>
-
-          <Link href="https://github.com/mgmarlow/tech-book-club">
-            <a className="navbar-item has-text-weight-bold">source ↗</a>
-          </Link>
         </div>
 
         <div className="navbar-end">
