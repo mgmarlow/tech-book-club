@@ -1,10 +1,12 @@
 import Link from 'next/link'
+import classnames from 'classnames'
 import Book from '../components/Book'
 import Footer from '../components/Footer'
 import Nav from '../components/Nav'
 import SEO from '../components/SEO'
 import { DISCORD_INVITE_URL } from '../constants/env'
 import { getAllBooks } from '../lib/books'
+import styles from './index.module.sass'
 
 export async function getStaticProps() {
   const currentBook = getAllBooks().find(book => book.state === 'in_progress')
@@ -38,7 +40,7 @@ export default function Home({ currentBook }) {
 
 function ToggleSection({ className, header, children }) {
   return (
-    <details className={className}>
+    <details className={classnames(className, styles.toggle)}>
       <summary>
         <span className="has-text-weight-bold">{header}</span>
       </summary>
