@@ -1,24 +1,6 @@
-import { useState, useEffect } from 'react'
 import Book from './Book'
 import Carousel from './Carousel'
-
-const useMediaQuery = query => {
-  const [matches, setMatches] = useState(false)
-
-  useEffect(() => {
-    const media = window.matchMedia(query)
-    if (media.matches !== matches) {
-      setMatches(media.matches)
-    }
-
-    const listener = () => setMatches(media.matches)
-    window.addEventListener('resize', listener)
-
-    return () => window.removeEventListener('resize', listener)
-  }, [matches, query])
-
-  return matches
-}
+import { useMediaQuery } from '../hooks/useMediaQuery'
 
 const MobileBookList = ({ books }) => {
   const bookItems = books.map(book => (
