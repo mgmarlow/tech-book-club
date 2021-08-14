@@ -23,7 +23,7 @@ export default function Books({ books }) {
         <div className="container">
           <section className="section">
             <div className="content is-medium">
-              <h3>Completed</h3>
+              <h2>Completed</h2>
 
               <p>
                 Take a look at what we've been up to. More{' '}
@@ -36,7 +36,7 @@ export default function Books({ books }) {
 
           <section className="section">
             <div className="content is-medium">
-              <h3>Up next</h3>
+              <h2>Up next</h2>
 
               <p>
                 We use this list to vote on what we're reading next. Want to add
