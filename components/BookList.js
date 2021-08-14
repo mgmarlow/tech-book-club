@@ -1,8 +1,47 @@
+import { useState, useEffect } from 'react'
 import Book from './Book'
 import Carousel from './Carousel'
 
-export default function BookList({ books }) {
+const useMediaQuery = query => {
+  const [matches, setMatches] = useState(false)
+
+  useEffect(() => {
+    const media = window.matchMedia(query)
+    if (media.matches !== matches) {
+      setMatches(media.matches)
+    }
+
+    const listener = () => setMatches(media.matches)
+    window.addEventListener('resize', listener)
+
+    return () => window.removeEventListener('resize', listener)
+  }, [matches, query])
+
+  return matches
+}
+
+const MobileBookList = ({ books }) => {
+  const bookItems = books.map(book => (
+    <li className="column is-3-tablet is-6-mobile" key={book.id}>
+      <Book key={book.id} book={book} />
+    </li>
+  ))
+
+  return <ul className="columns is-mobile is-multiline">{bookItems}</ul>
+}
+
+function DesktopBookList({ books }) {
   const bookItems = books.map(book => <Book key={book.id} book={book} />)
 
   return <Carousel>{bookItems}</Carousel>
+}
+
+export default function BookList({ books }) {
+  const isDesktop = useMediaQuery('(min-width: 960px)')
+
+  return isDesktop ? (
+    <DesktopBookList books={books} />
+  ) : (
+    <MobileBookList books={books} />
+  )
 }
