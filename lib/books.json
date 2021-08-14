@@ -6,7 +6,7 @@
     "state": "completed",
     "url": "https://learning.oreilly.com/library/view/clean-agile-back/9780135782002/",
     "summary": "",
-    "img": "books/martin_clean_agile.jpg"
+    "img": "/books/martin_clean_agile.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "state": "new",
     "url": "https://learning.oreilly.com/library/view/accelerate/9781457191435/",
     "summary": "Accelerate your organization to win in the marketplace.\n\n\nHow can we apply technology to drive business value? For years, we've been told that the performance of software delivery teams doesn't matter―that it can't provide a competitive advantage to our companies. Through four years of groundbreaking research to include data collected from the State of DevOps reports conducted with Puppet, Dr. Nicole Forsgren, Jez Humble, and Gene Kim set out to find a way to measure software delivery performance―and what drives it―using rigorous statistical methods. This book presents both the findings and the science behind that research, making the information accessible for readers to apply in their own organizations.\n\nReaders will discover how to measure the performance of their teams, and what capabilities they should invest in to drive higher performance. This book is ideal for management at every level.",
-    "img": "books/forsgren_accelerate.jpg"
+    "img": "/books/forsgren_accelerate.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "state": "completed",
     "url": "https://basecamp.com/shapeup",
     "summary": "Shape Up is for product development teams who struggle to ship.\n\nFull of eye-opening insights, Shape Up will help you break free of \"best practices\" that aren't working, think deeper about the right problems, and start shipping meaningful projects.",
-    "img": "books/singer_shape_up.svg"
+    "img": "/books/singer_shape_up.svg"
   },
   {
     "id": 7,
@@ -33,25 +33,25 @@
     "state": "new",
     "url": "https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/",
     "summary": "",
-    "img": "books/nichols_clean_architecture.jpg"
+    "img": "/books/nichols_clean_architecture.jpg"
   },
   {
     "id": 8,
     "title": "Thinking in Systems: A Primer",
     "author": "Donella H. Meadows",
     "state": "new",
-    "url": "https://bookshop.org/books/thinking-in-systems-international-bestseller/9781603580557",
+    "url": "https://bookshop.org//books/thinking-in-systems-international-bestseller/9781603580557",
     "summary": "Thinking in Systems, is a concise and crucial book offering insight for problem solving on scales ranging from the personal to the global. Edited by the Sustainability Institute’s Diana Wright, this essential primer brings systems thinking out of the realm of computers and equations and into the tangible world, showing readers how to develop the systems-thinking skills that thought leaders across the globe consider critical for 21st-century life.",
-    "img": "books/meadows_thinking_in_systems.jpg"
+    "img": "/books/meadows_thinking_in_systems.jpg"
   },
   {
     "id": 13,
     "title": "The DevOps Handbook",
     "author": "Gene Kim",
     "state": "new",
-    "url": "https://bookshop.org/books/the-devops-handbook-how-to-create-world-class-agility-reliability-and-security-in-technology-organizations-9781942788003/9781942788003",
+    "url": "https://bookshop.org//books/the-devops-handbook-how-to-create-world-class-agility-reliability-and-security-in-technology-organizations-9781942788003/9781942788003",
     "summary": "Increase profitability, elevate work culture, and exceed productivity goals through DevOps practices.\n\nMore than ever, the effective management of technology is critical for business competitiveness. For decades, technology leaders have struggled to balance agility, reliability, and security. The consequences of failure have never been greater―whether it's the healthcare.gov debacle, cardholder data breaches, or missing the boat with Big Data in the cloud.",
-    "img": "books/kim_devops_handbook.jpg"
+    "img": "/books/kim_devops_handbook.jpg"
   },
   {
     "id": 14,
@@ -60,7 +60,7 @@
     "state": "completed",
     "url": "https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/",
     "summary": "The software development community widely acknowledges that domain modeling is central to software design. Through domain models, software developers are able to express rich functionality and translate it into a software implementation that truly serves the needs of its users. But despite its obvious importance, there are few practical resources that explain how to incorporate effective domain modeling into the software development process.\n\nDomain-Driven Design fills that need. This is not a book about specific technologies. It offers readers a systematic approach to domain-driven design, presenting an extensive set of design best practices, experience-based techniques, and fundamental principles that facilitate the development of software projects facing complex domains. Intertwining design and development practice, this book incorporates numerous examples based on actual projects to illustrate the application of domain-driven design to real-world software development.\n\nReaders learn how to use a domain model to make a complex development effort more focused and dynamic. A core of best practices and standard patterns provides a common language for the development team. A shift in emphasis—refactoring not just the code but the model underlying the code—in combination with the frequent iterations of Agile development leads to deeper insight into domains and enhanced communication between domain expert and programmer. Domain-Driven Design then builds on this foundation, and addresses modeling and design for complex systems and larger organizations.",
-    "img": "books/evans_ddd.jpg"
+    "img": "/books/evans_ddd.jpg"
   },
   {
     "id": 15,
@@ -69,7 +69,7 @@
     "state": "new",
     "url": "https://learning.oreilly.com/library/view/patterns-of-enterprise/0321127420/",
     "summary": "Patterns of Enterprise Application Architecture is written in direct response to the stiff challenges that face enterprise application developers. The author, noted object-oriented designer Martin Fowler, noticed that despite changes in technology--from Smalltalk to CORBA to Java to .NET--the same basic design ideas can be adapted and applied to solve common problems. With the help of an expert group of contributors, Martin distills over forty recurring solutions into patterns. The result is an indispensable handbook of solutions that are applicable to any enterprise application platform.",
-    "img": "books/fowler_patterns_enterprise.jpg"
+    "img": "/books/fowler_patterns_enterprise.jpg"
   },
   {
     "id": 16,
@@ -78,7 +78,7 @@
     "state": "new",
     "url": "https://learning.oreilly.com/library/view/beyond-software-architecture/0201775948/",
     "summary": "",
-    "img": "books/hohmann_beyond_architecture.jpg"
+    "img": "/books/hohmann_beyond_architecture.jpg"
   },
   {
     "id": 17,
@@ -87,7 +87,7 @@
     "state": "completed",
     "url": "https://bigmachine.io/products/the-imposters-handbook/",
     "summary": "",
-    "img": "books/conery_imposters_handbook.jpg"
+    "img": "/books/conery_imposters_handbook.jpg"
   },
   {
     "id": 21,
@@ -96,7 +96,7 @@
     "state": "new",
     "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/",
     "summary": "A free text from a professor of computer science at the University of Illinois, Urbana-Champaign.",
-    "img": "books/erickson_algorithms.png"
+    "img": "/books/erickson_algorithms.png"
   },
   {
     "id": 22,
@@ -105,7 +105,7 @@
     "state": "new",
     "url": "https://www.indiebound.org/book/9780385346450",
     "summary": "For those who believe that there must be a more agile and efficient way for people to get things done, here is a brilliantly discursive, thought-provoking book about the leadership and management process that is changing the way we live.",
-    "img": "books/sutherland_scrum.jpg"
+    "img": "/books/sutherland_scrum.jpg"
   },
   {
     "id": 23,
@@ -114,15 +114,15 @@
     "state": "in_progress",
     "url": "https://www.amazon.com/Systems-Bible-Beginners-Guide-Large/dp/0961825170/",
     "summary": "a systems engineering treatise by John Gall in which he offers practical principles of systems design based on experience and anecdotes.",
-    "img": "books/gall_systemantics.jpg"
+    "img": "/books/gall_systemantics.jpg"
   },
   {
     "id": 24,
     "title": "Practical Object-Oriented Design: An Agile Primer Using Ruby",
     "author": "Sandi Metz",
     "state": "new",
-    "url": "https://bookshop.org/books/practical-object-oriented-design-an-agile-primer-using-ruby/9780134456478",
+    "url": "https://bookshop.org//books/practical-object-oriented-design-an-agile-primer-using-ruby/9780134456478",
     "summary": "The Complete Guide to Writing Maintainable, Manageable, Pleasing, and Powerful Object-Oriented Applications",
-    "img": "books/metz_practical_oop.jpg"
+    "img": "/books/metz_practical_oop.jpg"
   }
 ]
