@@ -1,7 +1,11 @@
 import classnames from 'classnames'
 import Link from 'next/link'
 import { useState } from 'react'
-import { DISCORD_INVITE_URL } from '../constants/env'
+import {
+  DISCORD_INVITE_URL,
+  DISCUSSIONS_URL,
+  STUDY_GROUP_URL,
+} from '../constants/env'
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false)
@@ -36,11 +40,11 @@ export default function Nav() {
             <a className="navbar-item has-text-weight-bold">books</a>
           </Link>
 
-          <Link href="https://www.notion.so/Discussions-0368f123f3c94c458b694d5cac6f1074">
+          <Link href={DISCUSSIONS_URL}>
             <a className="navbar-item has-text-weight-bold">discussions ↗</a>
           </Link>
 
-          <Link href="https://www.notion.so/Study-Groups-2f393067ee9946d3990a117093443af6">
+          <Link href={STUDY_GROUP_URL}>
             <a className="navbar-item has-text-weight-bold">study groups ↗</a>
           </Link>
         </div>
