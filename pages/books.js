@@ -1,6 +1,7 @@
 import Layout from '../components/Layout'
 import { getAllBooks } from '../lib/books'
 import BookList from '../components/BookList'
+import { BOOK_REQUEST_URL, DISCUSSIONS_URL } from '../constants/env'
 
 export async function getStaticProps() {
   const books = getAllBooks()
@@ -18,24 +19,33 @@ export default function Books({ books }) {
 
   return (
     <Layout>
-      <main>
+      <main className="pb-6">
         <div className="container">
           <section className="section">
-            <h1 className="is-size-1 title">Books</h1>
+            <div className="content is-medium">
+              <h3>Completed</h3>
 
-            <div className="my-3">
-              <h2 className="is-size-2">Completed</h2>
-              <hr />
-              <BookList books={completedBooks} />
+              <p>
+                Take a look at what we've been up to. More{' '}
+                <a href={DISCUSSIONS_URL}>discussion notes</a> coming soon!
+              </p>
             </div>
+
+            <BookList books={completedBooks} />
           </section>
 
           <section className="section">
-            <div>
-              <h2 className="is-size-2">Queued</h2>
-              <hr />
-              <BookList books={newBooks} />
+            <div className="content is-medium">
+              <h3>Up next</h3>
+
+              <p>
+                We use this list to vote on what we're reading next. Want to add
+                a book? Fill out the{' '}
+                <a href={BOOK_REQUEST_URL}>book request form</a>.
+              </p>
             </div>
+
+            <BookList books={newBooks} />
           </section>
         </div>
       </main>

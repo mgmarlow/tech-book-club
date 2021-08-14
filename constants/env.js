@@ -7,6 +7,8 @@ export const STUDY_GROUP_URL =
 export const LICENSE_URL =
   'https://github.com/mgmarlow/tech-book-club/blob/master/LICENSE'
 export const SOURCE_URL = 'https://github.com/mgmarlow/tech-book-club'
+export const BOOK_REQUEST_URL =
+  'https://github.com/mgmarlow/tech-book-club/issues/new?assignees=&labels=book+request&template=book-request.md&title=%5BBook+request%5D'
 
 // ENV
 export const FIREBASE_API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY

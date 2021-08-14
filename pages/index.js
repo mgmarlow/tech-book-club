@@ -4,7 +4,7 @@ import Book from '../components/Book'
 import Footer from '../components/Footer'
 import Nav from '../components/Nav'
 import SEO from '../components/SEO'
-import { DISCORD_INVITE_URL } from '../constants/env'
+import { BOOK_REQUEST_URL, DISCORD_INVITE_URL } from '../constants/env'
 import { getAllBooks } from '../lib/books'
 import styles from './index.module.sass'
 
@@ -201,11 +201,8 @@ function AddBookSection() {
       <div className="content is-medium">
         <h2>Want to suggest a book?</h2>
         <p>
-          Fill out the{' '}
-          <a href="https://github.com/mgmarlow/tech-book-club/issues/new?assignees=&labels=book+request&template=book-request.md&title=%5BBook+request%5D">
-            book request form
-          </a>
-          . Here are some guidelines:
+          Fill out the <a href={BOOK_REQUEST_URL}>book request form</a>. Here
+          are some guidelines:
         </p>
         <ul>
           <li>
