@@ -1,5 +1,6 @@
-import classnames from 'classnames'
 import { useEffect, useState, Children } from 'react'
+import classnames from 'classnames'
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import styles from './Carousel.module.sass'
 
 const useVisibleBooks = (numVisible, numChildren) => {
@@ -32,15 +33,21 @@ export default function Carousel({ children }) {
 
   const showNav = numPages > 0
 
-  // TODO: Consider using width=% if we want a number shown different from 5.
+  // Consider using width=% for numbers different from 5.
   const contents = Children.map(children, child => {
     return <li className="column is-one-fifth">{child}</li>
   })
 
   return (
-    <div>
-      {/* TODO: make these look nicer! */}
-      {showNav && <button onClick={decrement}>prev</button>}
+    <div className={styles.container}>
+      {showNav && (
+        <FiChevronLeft
+          className={classnames(styles.icon, {
+            [styles.disabled]: index === 0,
+          })}
+          onClick={decrement}
+        />
+      )}
 
       <div className="is-clipped">
         <ul
@@ -51,7 +58,14 @@ export default function Carousel({ children }) {
         </ul>
       </div>
 
-      {showNav && <button onClick={increment}>next</button>}
+      {showNav && (
+        <FiChevronRight
+          className={classnames(styles.icon, {
+            [styles.disabled]: index === numPages,
+          })}
+          onClick={increment}
+        />
+      )}
     </div>
   )
 }

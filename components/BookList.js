@@ -1,11 +1,8 @@
 import Book from './Book'
+import Carousel from './Carousel'
 
 export default function BookList({ books }) {
-  const bookItems = books.map(book => (
-    <li className="column is-2-desktop is-3-tablet is-4-mobile" key={book.id}>
-      <Book key={book.id} book={book} />
-    </li>
-  ))
+  const bookItems = books.map(book => <Book key={book.id} book={book} />)
 
-  return <ul className="columns is-mobile is-multiline">{bookItems}</ul>
+  return <Carousel>{bookItems}</Carousel>
 }

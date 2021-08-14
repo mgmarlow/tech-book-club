@@ -6596,6 +6596,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-icons@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "react-icons@npm:4.2.0"
+  peerDependencies:
+    react: "*"
+  checksum: 0052e25c6aacab93da3328ab856e4971214dce082de4bce857801802903366c7a8f9f490fe02ecd4ce181512b7b55cac12d6273c3c8dccc0e3b71b30dfd28256
+  languageName: node
+  linkType: hard
+
 "react-is@npm:17.0.2, react-is@npm:^17.0.1":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
@@ -7717,6 +7726,7 @@ __metadata:
     prettier: ^2.2.1
     react: 17.0.1
     react-dom: 17.0.1
+    react-icons: ^4.2.0
     remark: ^13.0.0
     remark-html: ^13.0.1
     sass: ^1.32.6
