@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import classnames from 'classnames'
 import styles from './Book.module.sass'
 
@@ -7,7 +6,9 @@ export default function Book({ className, book }) {
     <a href={book.url}>
       <div className={classnames(className, styles.pointer)}>
         <div className="has-text-centered">
-          <Image src={book.img} height="280" width="190" alt={book.title} />
+          <figure className="image is-2by3">
+            <img src={book.img || FALLBACK_URL} alt={book.title} />
+          </figure>
         </div>
 
         <div className="content is-small py-1">
