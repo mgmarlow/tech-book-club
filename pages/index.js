@@ -201,9 +201,9 @@ function AddBookSection() {
       <div className="content is-medium">
         <h2>Want to suggest a book?</h2>
         <p>
-          Submit a pull request to{' '}
-          <a href="https://github.com/mgmarlow/tech-book-club/blob/master/lib/books.json">
-            books.json
+          Fill out the{' '}
+          <a href="https://github.com/mgmarlow/tech-book-club/issues/new?assignees=&labels=book+request&template=book-request.md&title=%5BBook+request%5D">
+            book request form
           </a>
           . Here are some guidelines:
         </p>
