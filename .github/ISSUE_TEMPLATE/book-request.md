@@ -9,7 +9,7 @@ assignees: ''
 
 **Book title & author**
 
-__Some title__, by foo bar
+_Some title_, by foo bar
 
 **One paragraph summary**
 
