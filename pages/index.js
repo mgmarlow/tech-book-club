@@ -40,12 +40,12 @@ export default function Home({ currentBook }) {
 
 function ToggleSection({ className, header, children }) {
   return (
-    <details className={classnames(className, styles.toggle)}>
-      <summary>
+    <details className={className}>
+      <summary className={styles.toggle}>
         <span className="has-text-weight-bold">{header}</span>
       </summary>
 
-      <div className="py-2">{children}</div>
+      <div className="content is-medium ml-4 py-2">{children}</div>
     </details>
   )
 }
