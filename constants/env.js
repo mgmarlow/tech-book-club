@@ -1,14 +1,10 @@
 // Outbound URLs
-export const DISCORD_INVITE_URL = 'https://discord.gg/hxvHgqswNs'
-export const DISCUSSIONS_URL =
-  'https://www.notion.so/Discussions-0368f123f3c94c458b694d5cac6f1074'
-export const STUDY_GROUP_URL =
-  'https://www.notion.so/Study-Groups-2f393067ee9946d3990a117093443af6'
 export const LICENSE_URL =
   'https://github.com/mgmarlow/tech-book-club/blob/master/LICENSE'
 export const SOURCE_URL = 'https://github.com/mgmarlow/tech-book-club'
 export const BOOK_REQUEST_URL =
   'https://github.com/mgmarlow/tech-book-club/issues/new?assignees=&labels=book+request&template=book-request.md&title=%5BBook+request%5D'
+export const NEWSLETTER_URL = 'https://buttondown.email/techbookclub'
 
 // ENV
 export const FIREBASE_API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY

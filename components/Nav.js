@@ -1,11 +1,7 @@
 import classnames from 'classnames'
 import Link from 'next/link'
 import { useState } from 'react'
-import {
-  DISCORD_INVITE_URL,
-  DISCUSSIONS_URL,
-  STUDY_GROUP_URL,
-} from '../constants/env'
+import { NEWSLETTER_URL } from '../constants/env'
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false)
@@ -36,27 +32,13 @@ export default function Nav() {
         className={classnames('navbar-menu', { 'is-active': isOpen })}
       >
         <div className="navbar-start">
-          <Link href="/books">
-            <a className="navbar-item has-text-weight-bold">books</a>
+          <Link href="#about">
+            <a className="navbar-item has-text-weight-bold">about</a>
           </Link>
 
-          <Link href={DISCUSSIONS_URL}>
-            <a className="navbar-item has-text-weight-bold">discussions ↗</a>
-          </Link>
-
-          <Link href={STUDY_GROUP_URL}>
-            <a className="navbar-item has-text-weight-bold">study groups ↗</a>
-          </Link>
-        </div>
-
-        <div className="navbar-end">
-          <div className="navbar-item">
-            <div className="buttons">
-              <a href={DISCORD_INVITE_URL} className="button is-primary">
-                <strong>discord ↗</strong>
-              </a>
-            </div>
-          </div>
+          <a href="#newsletter" className="navbar-item has-text-weight-bold">
+            newsletter
+          </a>
         </div>
       </div>
     </nav>
