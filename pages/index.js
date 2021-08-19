@@ -26,6 +26,7 @@ export default function Home({ currentBook }) {
         <div className="container is-thin mb-6">
           <Hero currentBook={currentBook} />
           <NewsletterForm />
+          <About />
         </div>
       </main>
 
@@ -113,6 +114,32 @@ function NewsletterForm() {
             No spam, no trackers, unsubscribe anytime.
           </p>
         </div>
+      </div>
+    </section>
+  )
+}
+
+function About() {
+  return (
+    <section className="section" id="about">
+      <div className="content is-medium">
+        <h2>About</h2>
+        <p>
+          Tech book club started in 2020 to help reestablish a sense of
+          community when all things went to crazy town. We were a small group of
+          software engineers deeply interested in learning more about our craft.
+        </p>
+        <p>
+          What we discovered in our weekly meetings is that active,
+          community-driven discussion is so much more satisfying than
+          independent study. Listening to other opinions and experiences adds a
+          new level of insight to already great computer science literature.
+        </p>
+        <p>
+          Although our group no longer meets on a regular cadence, I created
+          this newsletter to keep the idea alive and foster a community around
+          studying software engineering.
+        </p>
       </div>
     </section>
   )
