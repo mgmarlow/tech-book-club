@@ -1,9 +1,6 @@
 // Outbound URLs
 export const LICENSE_URL =
   'https://github.com/mgmarlow/tech-book-club/blob/master/LICENSE'
-export const SOURCE_URL = 'https://github.com/mgmarlow/tech-book-club'
-export const BOOK_REQUEST_URL =
-  'https://github.com/mgmarlow/tech-book-club/issues/new?assignees=&labels=book+request&template=book-request.md&title=%5BBook+request%5D'
 export const NEWSLETTER_URL = 'https://buttondown.email/techbookclub'
 
 // ENV
