@@ -47,7 +47,7 @@ function Hero({ currentBook }) {
               <p>
                 Currently reading: <em>{currentBook.title}</em>
               </p>
-              <blockquote className="has-background-white">
+              <blockquote className="has-background-white is-size-6">
                 <em>{currentBook.summary}</em>
               </blockquote>
             </>
