@@ -3,7 +3,8 @@ import Carousel from './Carousel'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 
 const MobileBookList = ({ books }) => {
-  const bookItems = books.map(book => (
+  // #slice here breaks reusability
+  const bookItems = books.slice(0, 2).map(book => (
     <li className="column is-3-tablet is-6-mobile" key={book.id}>
       <Book key={book.id} book={book} />
     </li>
@@ -19,7 +20,7 @@ function DesktopBookList({ books }) {
 }
 
 export default function BookList({ books }) {
-  const isDesktop = useMediaQuery('(min-width: 960px)')
+  const isDesktop = useMediaQuery('(min-width: 767px)')
 
   return isDesktop ? (
     <DesktopBookList books={books} />

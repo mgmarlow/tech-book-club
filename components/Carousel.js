@@ -26,8 +26,9 @@ const useVisibleBooks = (numVisible, numChildren) => {
 }
 
 export default function Carousel({ children }) {
+  // TODO: Update this to set # elements via props
   const [index, { numPages, increment, decrement }] = useVisibleBooks(
-    5,
+    3,
     Children.count(children),
   )
 
@@ -35,7 +36,7 @@ export default function Carousel({ children }) {
 
   // Consider using width=% for numbers different from 5.
   const contents = Children.map(children, child => {
-    return <li className="column is-one-fifth">{child}</li>
+    return <li className="column is-one-third">{child}</li>
   })
 
   return (

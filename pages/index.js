@@ -3,6 +3,7 @@ import Book from '../components/Book'
 import Footer from '../components/Footer'
 import Nav from '../components/Nav'
 import SEO from '../components/SEO'
+import BookList from '../components/BookList'
 import { getAllBooks } from '../lib/books'
 import styles from './index.module.sass'
 
@@ -26,7 +27,8 @@ export default function Home({ currentBook }) {
         <div className="container is-thin mb-6">
           <Hero currentBook={currentBook} />
           <NewsletterForm />
-          <About />
+          <ComingUpNext />
+          <Story />
         </div>
       </main>
 
@@ -119,11 +121,24 @@ function NewsletterForm() {
   )
 }
 
-function About() {
+function ComingUpNext() {
   return (
-    <section className="section" id="about">
+    <section className="section" id="books">
       <div className="content is-medium">
-        <h2>About</h2>
+        <h2 className="is-header-2">Coming up next</h2>
+        <p>Take a look at what's in store for the future.</p>
+      </div>
+
+      <BookList books={getAllBooks().filter(b => b.state === 'new')} />
+    </section>
+  )
+}
+
+function Story({ className }) {
+  return (
+    <section className={classnames(className, 'section')} id="story">
+      <div className="content is-medium">
+        <h2>The Story</h2>
         <p>
           Tech book club started in 2020 to help reestablish a sense of
           community when all things went to crazy town. We were a small group of
