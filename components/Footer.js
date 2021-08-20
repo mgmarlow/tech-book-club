@@ -22,10 +22,19 @@ export default function Footer() {
         </p>
       </div>
 
-      <div className="columns is-centered is-mobile">
-        <div className="column is-narrow mr-5">
+      <div className="columns is-centered">
+        <div className="column is-narrow mr-5 has-text-centered">
           Check out the{' '}
           <FooterLink href={NEWSLETTER_URL}>newsletter ↗</FooterLink>
+        </div>
+        <div className="column is-narrow has-text-centered">
+          <a href="https://www.buymeacoffee.com/mgmarlow" target="_blank">
+            <img
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+              alt="Buy Me A Coffee"
+              style={{ height: '60px', width: '217px' }}
+            />
+          </a>
         </div>
       </div>
     </footer>
