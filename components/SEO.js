@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 export default function SEO({
   title = 'tech book club',
-  description = 'A community of software engineers looking to improve their craft.',
+  description = 'Explore classic computer science literature and learn how to apply to the everyday craft.',
 }) {
   return (
     <Head>

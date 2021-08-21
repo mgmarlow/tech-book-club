@@ -1,10 +1,9 @@
-import Link from 'next/link'
 import classnames from 'classnames'
 import Book from '../components/Book'
 import Footer from '../components/Footer'
 import Nav from '../components/Nav'
 import SEO from '../components/SEO'
-import { BOOK_REQUEST_URL, DISCORD_INVITE_URL } from '../constants/env'
+import BookList from '../components/BookList'
 import { getAllBooks } from '../lib/books'
 import styles from './index.module.sass'
 
@@ -27,26 +26,14 @@ export default function Home({ currentBook }) {
       <main>
         <div className="container is-thin mb-6">
           <Hero currentBook={currentBook} />
-          <AboutSection />
-          <AddBookSection />
-          <FAQ />
+          <NewsletterForm />
+          <ComingUpNext />
+          <Story />
         </div>
       </main>
 
       <Footer />
     </>
-  )
-}
-
-function ToggleSection({ className, header, children }) {
-  return (
-    <details className={className}>
-      <summary className={styles.toggle}>
-        <span className="has-text-weight-bold">{header}</span>
-      </summary>
-
-      <div className="content is-medium ml-4 py-2">{children}</div>
-    </details>
   )
 }
 
@@ -56,29 +43,16 @@ function Hero({ currentBook }) {
       <div className="columns">
         <div className="column">
           <div className="content is-medium">
-            <h1>tech book club</h1>
+            <h1 className="is-size-1">tech book club</h1>
 
-            {currentBook ? (
+            <>
               <p>
                 Currently reading: <em>{currentBook.title}</em>
               </p>
-            ) : (
-              <p>Let's talk about what we're reading.</p>
-            )}
-
-            <div>
-              <Link href={DISCORD_INVITE_URL}>
-                <button className="button has-text-weight-bold is-primary">
-                  Join the discord
-                </button>
-              </Link>
-
-              <Link href="/books">
-                <button className="button is-ghost has-text-dark">
-                  Browse the books
-                </button>
-              </Link>
-            </div>
+              <blockquote className="has-background-white is-size-6">
+                <em>{currentBook.summary}</em>
+              </blockquote>
+            </>
           </div>
         </div>
 
@@ -92,139 +66,95 @@ function Hero({ currentBook }) {
   )
 }
 
-function AboutSection() {
+function NewsletterForm() {
   return (
-    <section className="section">
+    <section className="section" id="newsletter">
       <div className="content is-medium">
-        <h2>What's it all about?</h2>
+        <h2>Join the newsletter</h2>
+
         <p>
-          Learning is more fun with friends. Book club is an opportunity to
-          apply theory, challenge ideas, and study in a friendly environment.
+          <b>tech book club</b> explores classic computer science literature and
+          applies it to the everyday craft. Each newsletter is packed full of
+          notes, code samples, and analysis related to that month's book.
         </p>
-        <p>
-          Join our weekly discussion sessions held on{' '}
-          <strong>Wednesdays at 4:30 PST</strong>. All you need to get started
-          is a few questions and a copy of the book.
-        </p>
+
+        <p>Read along or just tune in to learn something new:</p>
+
+        <div>
+          <form
+            action="https://buttondown.email/api/emails/embed-subscribe/techbookclub"
+            method="post"
+            target="popupwindow"
+            onSubmit={() =>
+              window.open(
+                'https://buttondown.email/techbookclub',
+                'popupwindow',
+              )
+            }
+            className="field has-addons"
+          >
+            <div className={classnames('control', styles.newsletterInput)}>
+              <input
+                placeholder="your@email.com"
+                className="input is-medium"
+                type="email"
+                name="email"
+                id="bd-email"
+              />
+            </div>
+            <input type="hidden" value="1" name="embed" />
+            <div className="control">
+              <input
+                className="button is-primary is-medium"
+                type="submit"
+                value="Subscribe"
+              />
+            </div>
+          </form>
+
+          <p className="is-size-6 has-text-centered">
+            No spam, no trackers, unsubscribe anytime.
+          </p>
+        </div>
       </div>
     </section>
   )
 }
 
-function FAQ() {
+function ComingUpNext() {
   return (
-    <section className="section">
+    <section className="section" id="books">
       <div className="content is-medium">
-        <h2 id="faq">FAQ</h2>
-
-        <ToggleSection className="my-2" header="What goes into a discussion?">
-          <p>
-            tech book club is built on community discussions. Here are some tips
-            to help you contribute to our weekly sessions:
-          </p>
-          <ul>
-            <li>Don't summarize the reading, we've already read it!</li>
-            <li>
-              Come prepared with a question you'd like to ask the group, or a
-              code snippet you'd like to demo.
-            </li>
-            <li>
-              Expand on the book content by applying it to your personal
-              experience. Think about where you've seen the techniques work or
-              fail, alternatives that you've considered, or examples of how
-              you've applied similar methods.
-            </li>
-            <li>
-              Note areas where the author explained something well, or wrote
-              something that resonated with you.
-            </li>
-          </ul>
-        </ToggleSection>
-
-        <ToggleSection
-          className="my-2"
-          header="Can I still attend if I missed the reading?"
-        >
-          <p>
-            Yes! Your contributions are still valuable even if you missed a
-            chapter or two.
-          </p>
-        </ToggleSection>
-
-        <ToggleSection
-          className="my-2"
-          header="There are billions of note-taking apps. What do the cool kids
-            use?"
-        >
-          <p>
-            <a href="https://notion.so/">Notion</a> is my personal favorite, but
-            some other great alternatives are{' '}
-            <a href="https://obsidian.md/">Obsidian</a>,{' '}
-            <a href="https://foambubble.github.io/foam/">Foam</a>, and{' '}
-            <a href="https://www.zettlr.com/">Zettlr</a>.
-          </p>
-        </ToggleSection>
-
-        <ToggleSection
-          className="my-2"
-          header="How can I help improve tech book club?"
-        >
-          <p>
-            Found a bug or have suggestions?{' '}
-            <a href="https://github.com/mgmarlow/tech-book-club/issues">
-              File an issue
-            </a>
-            .
-          </p>
-          <p>
-            tech book club is an open source project licensed under{' '}
-            <a href="https://opensource.org/licenses/GPL-3.0">GPL-3.0</a>.
-            Please feel welcome to read the{' '}
-            <a href="https://github.com/mgmarlow/tech-book-club/blob/master/CONTRIBUTING.md">
-              contributing guide
-            </a>{' '}
-            and submit a{' '}
-            <a href="https://github.com/mgmarlow/tech-book-club/pulls">
-              pull request
-            </a>
-            .
-          </p>
-        </ToggleSection>
+        <h2 className="is-header-2">Coming up next</h2>
+        <p>Take a look at what's in store for the future.</p>
       </div>
+
+      <BookList books={getAllBooks().filter(b => b.state === 'new')} />
     </section>
   )
 }
 
-function AddBookSection() {
+function Story({ className }) {
   return (
-    <section className="section">
+    <section className={classnames(className, 'section')} id="story">
       <div className="content is-medium">
-        <h2>Want to suggest a book?</h2>
+        <h2>The Story</h2>
         <p>
-          Fill out the <a href={BOOK_REQUEST_URL}>book request form</a>. Here
-          are some guidelines:
+          Tech book club started in 2020 to help reestablish a sense of
+          community when all things went to crazy town. We were a small group of
+          software engineers deeply interested in learning more about our craft.
         </p>
-        <ul>
-          <li>
-            <p>
-              Suggest books you <em>want</em> to read, not ones you{' '}
-              <em>should</em> read.
-            </p>
-          </li>
-          <li>
-            <p>
-              Choose books that relate to the field of software development.
-              Books don't need to be about programming, but they should be
-              applicable to the field.
-            </p>
-          </li>
-          <li>
-            <p>
-              Help the voting process by listing a few reasons you want to read
-              the book.
-            </p>
-          </li>
-        </ul>
+        <p>
+          What we discovered in our weekly meetings is that active,
+          community-driven discussion is so much more satisfying than
+          independent study. Listening to other opinions and experiences adds a
+          new level of insight to already great computer science literature.
+        </p>
+        <p>
+          Although our group no longer meets on a regular cadence, I created
+          this newsletter to keep the idea alive and foster a community around
+          studying software engineering.
+        </p>
       </div>
     </section>
   )
