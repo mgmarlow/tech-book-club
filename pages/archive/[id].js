@@ -25,7 +25,7 @@ export default function Article({ articleData }) {
   return (
     <>
       <Nav />
-      <SEO />
+      <SEO title={articleData.title} description={articleData.description} />
 
       <div className="container is-thin">
         <section className="section">
@@ -34,7 +34,7 @@ export default function Article({ articleData }) {
 
             <p className="subtitle is-size-6">
               <em>
-                Posted: <time>{articleData.date}</time>
+                Posted: <time>{articleData.date}</time> by {articleData.author}
               </em>
             </p>
 
