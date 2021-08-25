@@ -41,6 +41,10 @@ export default function Archive({ articleData }) {
             </div>
           </section>
         </div>
+
+        <div className="has-text-centered py-6">
+          <img width="400" height="400" src="/assets/book_lover_flat.svg" />
+        </div>
       </main>
 
       <Footer />

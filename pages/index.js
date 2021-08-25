@@ -30,8 +30,8 @@ export default function Home({ currentBook, articleData }) {
         <div className="container is-thin mb-6">
           <Hero currentBook={currentBook} />
           <ArticlePreview articleData={articleData} />
-          <ComingUpNext />
           <Story />
+          <ComingUpNext />
         </div>
       </main>
 
@@ -89,10 +89,11 @@ function ArticlePreview({ articleData }) {
         <h2>Recent articles</h2>
 
         <p>
-          Or, browse the <Link href="/archive">archive</Link>.
+          Read the newest stuff or browse the{' '}
+          <Link href="/archive">archive</Link>.
         </p>
 
-        <ul>{previews}</ul>
+        <ul className="ml-0">{previews}</ul>
       </div>
     </section>
   )
