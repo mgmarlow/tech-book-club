@@ -1,4 +1,5 @@
 import classnames from 'classnames'
+import styles from './NewsletterForm.module.sass'
 
 export default function NewsletterForm() {
   return (

@@ -29,7 +29,6 @@ export default function Home({ currentBook, articleData }) {
       <main>
         <div className="container is-thin mb-6">
           <Hero currentBook={currentBook} />
-          {/* <NewsletterForm /> */}
           <ArticlePreview articleData={articleData} />
           <ComingUpNext />
           <Story />
