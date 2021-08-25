@@ -1,4 +1,5 @@
 import classnames from 'classnames'
+import Link from 'next/link'
 import Book from '../components/Book'
 import Footer from '../components/Footer'
 import Nav from '../components/Nav'
@@ -6,18 +7,21 @@ import SEO from '../components/SEO'
 import BookList from '../components/BookList'
 import { getAllBooks } from '../lib/books'
 import styles from './index.module.sass'
+import { getArticleDataByDate } from '../lib/articles'
 
 export async function getStaticProps() {
   const currentBook = getAllBooks().find(book => book.state === 'in_progress')
+  const articleData = await getArticleDataByDate()
 
   return {
     props: {
       currentBook,
+      articleData,
     },
   }
 }
 
-export default function Home({ currentBook }) {
+export default function Home({ currentBook, articleData }) {
   return (
     <>
       <Nav />
@@ -26,7 +30,8 @@ export default function Home({ currentBook }) {
       <main>
         <div className="container is-thin mb-6">
           <Hero currentBook={currentBook} />
-          <NewsletterForm />
+          {/* <NewsletterForm /> */}
+          <ArticlePreview articleData={articleData} />
           <ComingUpNext />
           <Story />
         </div>
@@ -61,6 +66,24 @@ function Hero({ currentBook }) {
             <Book book={currentBook} />
           </div>
         )}
+      </div>
+    </section>
+  )
+}
+
+function ArticlePreview({ articleData }) {
+  const previews = articleData.map(a => (
+    <Link href={`/archive/${a.id}`} key={a.id}>
+      <li>{a.title}</li>
+    </Link>
+  ))
+
+  return (
+    <section className="section">
+      <div className="content is-medium">
+        <h2>Browse the archive</h2>
+
+        <ul>{previews}</ul>
       </div>
     </section>
   )
