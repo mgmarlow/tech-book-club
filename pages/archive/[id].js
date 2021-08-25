@@ -1,3 +1,4 @@
+import Footer from '../../components/Footer'
 import Nav from '../../components/Nav'
 import SEO from '../../components/SEO'
 import { getArticleData, getArticleIds } from '../../lib/articles'
@@ -11,7 +12,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const articleData = getArticleData(params.id)
+  const articleData = await getArticleData(params.id, true)
+
   return {
     props: {
       articleData,
@@ -25,10 +27,26 @@ export default function Article({ articleData }) {
       <Nav />
       <SEO />
 
-      <div className="content is-medium">
-        {articleData.title}
-        {articleData.date}
+      <div className="container is-thin">
+        <section className="section">
+          <div className="content is-medium">
+            <h1>{articleData.title}</h1>
+
+            <p className="subtitle is-size-6">
+              <em>
+                Posted: <time>{articleData.date}</time>
+              </em>
+            </p>
+
+            <div
+              className="py-4"
+              dangerouslySetInnerHTML={{ __html: articleData.contentHtml }}
+            />
+          </div>
+        </section>
       </div>
+
+      <Footer />
     </>
   )
 }
