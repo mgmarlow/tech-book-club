@@ -1,23 +1,26 @@
 import classnames from 'classnames'
+import Link from 'next/link'
 import Book from '../components/Book'
 import Footer from '../components/Footer'
 import Nav from '../components/Nav'
 import SEO from '../components/SEO'
 import BookList from '../components/BookList'
 import { getAllBooks } from '../lib/books'
-import styles from './index.module.sass'
+import { getArticleDataByDate } from '../lib/articles'
 
 export async function getStaticProps() {
   const currentBook = getAllBooks().find(book => book.state === 'in_progress')
+  const articleData = (await getArticleDataByDate()).slice(0, 3)
 
   return {
     props: {
       currentBook,
+      articleData,
     },
   }
 }
 
-export default function Home({ currentBook }) {
+export default function Home({ currentBook, articleData }) {
   return (
     <>
       <Nav />
@@ -26,9 +29,9 @@ export default function Home({ currentBook }) {
       <main>
         <div className="container is-thin mb-6">
           <Hero currentBook={currentBook} />
-          <NewsletterForm />
-          <ComingUpNext />
+          <ArticlePreview articleData={articleData} />
           <Story />
+          <ComingUpNext />
         </div>
       </main>
 
@@ -66,56 +69,31 @@ function Hero({ currentBook }) {
   )
 }
 
-function NewsletterForm() {
+function ArticlePreview({ articleData }) {
+  const previews = articleData.map(a => (
+    <Link href={`/archive/${a.id}`} key={a.id}>
+      <li className="media is-clickable">
+        <div className="media-content">
+          <span>
+            <strong>{a.title}</strong>
+          </span>
+          <p className="is-size-6">{a.description}</p>
+        </div>
+      </li>
+    </Link>
+  ))
+
   return (
-    <section className="section" id="newsletter">
+    <section className="section">
       <div className="content is-medium">
-        <h2>Join the newsletter</h2>
+        <h2>Recent articles</h2>
 
         <p>
-          <b>tech book club</b> explores classic computer science literature and
-          applies it to the everyday craft. Each newsletter is packed full of
-          notes, code samples, and analysis related to that month's book.
+          Read the newest stuff or browse the{' '}
+          <Link href="/archive">archive</Link>.
         </p>
 
-        <p>Read along or just tune in to learn something new:</p>
-
-        <div>
-          <form
-            action="https://buttondown.email/api/emails/embed-subscribe/techbookclub"
-            method="post"
-            target="popupwindow"
-            onSubmit={() =>
-              window.open(
-                'https://buttondown.email/techbookclub',
-                'popupwindow',
-              )
-            }
-            className="field has-addons"
-          >
-            <div className={classnames('control', styles.newsletterInput)}>
-              <input
-                placeholder="your@email.com"
-                className="input is-medium"
-                type="email"
-                name="email"
-                id="bd-email"
-              />
-            </div>
-            <input type="hidden" value="1" name="embed" />
-            <div className="control">
-              <input
-                className="button is-primary is-medium"
-                type="submit"
-                value="Subscribe"
-              />
-            </div>
-          </form>
-
-          <p className="is-size-6 has-text-centered">
-            No spam, no trackers, unsubscribe anytime.
-          </p>
-        </div>
+        <ul className="ml-0">{previews}</ul>
       </div>
     </section>
   )

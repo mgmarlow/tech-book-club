@@ -24,8 +24,7 @@ export default function Footer() {
 
       <div className="columns is-centered">
         <div className="column is-narrow mr-5 has-text-centered">
-          Check out the{' '}
-          <FooterLink href={NEWSLETTER_URL}>newsletter ↗</FooterLink>
+          Check out the <FooterLink href="/archive">archive ↗</FooterLink>
         </div>
         <div className="column is-narrow has-text-centered">
           <a href="https://www.buymeacoffee.com/mgmarlow" target="_blank">
