@@ -9,6 +9,15 @@
     "img": "/books/martin_clean_agile.jpg"
   },
   {
+    "id": 26,
+    "title": "Designing Data-Intensive Applications",
+    "author": "Martin Kleppmann",
+    "state": "new",
+    "url": "https://bookshop.org/books/designing-data-intensive-applications-the-big-ideas-behind-reliable-scalable-and-maintainable-systems/9781449373320",
+    "summary": "In this practical and comprehensive guide, author Martin Kleppmann helps you navigate [the modern data] landscape by examining the pros and cons of various technologies for processing and storing data. Software keeps changing, but the fundamental principles remain the same.",
+    "img": "/books/data_driven_apps.jpg"
+  },
+  {
     "id": 2,
     "title": "Functional-Light JS",
     "author": "Kyle Simpson",
@@ -18,6 +27,15 @@
     "img": "/books/simpson_functional_light.png"
   },
   {
+    "id": 23,
+    "title": "General Systemantics",
+    "author": "John Gall",
+    "state": "in_progress",
+    "url": "https://www.amazon.com/Systems-Bible-Beginners-Guide-Large/dp/0961825170/",
+    "summary": "A systems engineering treatise by John Gall in which he offers practical principles of systems design based on experience and anecdotes.",
+    "img": "/books/gall_systemantics.jpg"
+  },
+  {
     "id": 24,
     "title": "Practical Object-Oriented Design: An Agile Primer Using Ruby",
     "author": "Sandi Metz",
@@ -25,15 +43,6 @@
     "url": "https://bookshop.org//books/practical-object-oriented-design-an-agile-primer-using-ruby/9780134456478",
     "summary": "The Complete Guide to Writing Maintainable, Manageable, Pleasing, and Powerful Object-Oriented Applications",
     "img": "/books/metz_practical_oop.jpg"
-  },
-  {
-    "id": 23,
-    "title": "General Systemantics",
-    "author": "John Gall",
-    "state": "new",
-    "url": "https://www.amazon.com/Systems-Bible-Beginners-Guide-Large/dp/0961825170/",
-    "summary": "A systems engineering treatise by John Gall in which he offers practical principles of systems design based on experience and anecdotes.",
-    "img": "/books/gall_systemantics.jpg"
   },
   {
     "id": 3,
@@ -63,19 +72,10 @@
     "img": "/books/evans_ddd.jpg"
   },
   {
-    "id": 21,
-    "title": "Accelerate: The Science of Lean Software and DevOps",
-    "author": "Nicole Forsgren, Jez Humble, Gene Kim",
-    "state": "new",
-    "url": "https://learning.oreilly.com/library/view/accelerate/9781457191435/",
-    "summary": "Accelerate your organization to win in the marketplace.\n\n\nHow can we apply technology to drive business value? For years, we've been told that the performance of software delivery teams doesn't matter―that it can't provide a competitive advantage to our companies. Through four years of groundbreaking research to include data collected from the State of DevOps reports conducted with Puppet, Dr. Nicole Forsgren, Jez Humble, and Gene Kim set out to find a way to measure software delivery performance―and what drives it―using rigorous statistical methods. This book presents both the findings and the science behind that research, making the information accessible for readers to apply in their own organizations.\n\nReaders will discover how to measure the performance of their teams, and what capabilities they should invest in to drive higher performance. This book is ideal for management at every level.",
-    "img": "/books/forsgren_accelerate.jpg"
-  },
-  {
     "id": 25,
     "title": "Structure and Interpretation of Computer Programs",
     "author": "Abelson, Sussman, et al.",
-    "state": "in_progress",
+    "state": "new",
     "url": "https://mitpress.mit.edu/sites/default/files/sicp/index.html",
     "summary": "Computing has changed enormously over [the last 25 years...] And yet the big ideas behind these changes remain the same, and they are well captured by SICP. —Brian Harvey",
     "img": "/books/sicp.jpg"
