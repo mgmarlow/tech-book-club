@@ -6,6 +6,7 @@ import Nav from '../components/Nav'
 import SEO from '../components/SEO'
 import BookList from '../components/BookList'
 import { getAllBooks } from '../lib/books'
+import { CONTACT_US_URL } from '../constants/env'
 
 export async function getStaticProps() {
   const currentBook = getAllBooks().find(book => book.state === 'in_progress')
@@ -107,9 +108,10 @@ function Story({ className }) {
           new level of insight to already great computer science literature.
         </p>
         <p>
-          Although our group no longer meets on a regular cadence, I created
-          this newsletter to keep the idea alive and foster a community around
-          studying software engineering.
+          After the book club disbanded, Nolan and I decided to keep the
+          discussion alive in the form of this podcast. We hope you find our
+          discussions entertaining. If you'd like to leave feedback,
+          <a href={CONTACT_US_URL}> contact us</a>.
         </p>
       </div>
     </section>
