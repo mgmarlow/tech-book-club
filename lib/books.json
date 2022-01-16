@@ -30,7 +30,7 @@
     "id": 23,
     "title": "General Systemantics",
     "author": "John Gall",
-    "state": "in_progress",
+    "state": "completed",
     "url": "https://www.amazon.com/Systems-Bible-Beginners-Guide-Large/dp/0961825170/",
     "summary": "A systems engineering treatise by John Gall in which he offers practical principles of systems design based on experience and anecdotes.",
     "img": "/books/gall_systemantics.jpg"
@@ -39,9 +39,9 @@
     "id": 24,
     "title": "Practical Object-Oriented Design: An Agile Primer Using Ruby",
     "author": "Sandi Metz",
-    "state": "new",
+    "state": "in_progress",
     "url": "https://bookshop.org//books/practical-object-oriented-design-an-agile-primer-using-ruby/9780134456478",
-    "summary": "The Complete Guide to Writing Maintainable, Manageable, Pleasing, and Powerful Object-Oriented Applications",
+    "summary": "The Complete Guide to Writing Maintainable, Manageable, Pleasing, and Powerful Object-Oriented Applications.",
     "img": "/books/metz_practical_oop.jpg"
   },
   {

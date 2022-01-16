@@ -6,16 +6,13 @@ import Nav from '../components/Nav'
 import SEO from '../components/SEO'
 import BookList from '../components/BookList'
 import { getAllBooks } from '../lib/books'
-import { getArticleDataByDate } from '../lib/articles'
 
 export async function getStaticProps() {
   const currentBook = getAllBooks().find(book => book.state === 'in_progress')
-  const articleData = (await getArticleDataByDate()).slice(0, 3)
 
   return {
     props: {
       currentBook,
-      articleData,
     },
   }
 }
@@ -29,7 +26,7 @@ export default function Home({ currentBook, articleData }) {
       <main>
         <div className="container is-thin mb-6">
           <Hero currentBook={currentBook} />
-          <ArticlePreview articleData={articleData} />
+          <RecentEpisodes />
           <Story />
           <ComingUpNext />
         </div>
@@ -37,6 +34,17 @@ export default function Home({ currentBook, articleData }) {
 
       <Footer />
     </>
+  )
+}
+
+function RecentEpisodes() {
+  return (
+    <section className="section" id="podcast">
+      <div className="content is-medium">
+        <h2 className="is-header-2">Recent Episodes</h2>
+      </div>
+      todo
+    </section>
   )
 }
 
@@ -64,36 +72,6 @@ function Hero({ currentBook }) {
             <Book book={currentBook} />
           </div>
         )}
-      </div>
-    </section>
-  )
-}
-
-function ArticlePreview({ articleData }) {
-  const previews = articleData.map(a => (
-    <Link href={`/archive/${a.id}`} key={a.id}>
-      <li className="media is-clickable">
-        <div className="media-content">
-          <span>
-            <strong>{a.title}</strong>
-          </span>
-          <p className="is-size-6">{a.description}</p>
-        </div>
-      </li>
-    </Link>
-  ))
-
-  return (
-    <section className="section">
-      <div className="content is-medium">
-        <h2>Recent articles</h2>
-
-        <p>
-          Read the newest stuff or browse the{' '}
-          <Link href="/archive">archive</Link>.
-        </p>
-
-        <ul className="ml-0">{previews}</ul>
       </div>
     </section>
   )
