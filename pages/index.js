@@ -1,5 +1,4 @@
 import classnames from 'classnames'
-import Link from 'next/link'
 import Book from '../components/Book'
 import Footer from '../components/Footer'
 import Nav from '../components/Nav'
@@ -7,18 +6,22 @@ import SEO from '../components/SEO'
 import BookList from '../components/BookList'
 import { getAllBooks } from '../lib/books'
 import { CONTACT_US_URL } from '../constants/env'
+import { getEpisodes } from '../lib/episodes'
+import EpisodePreview from '../components/EpisodePreview'
 
 export async function getStaticProps() {
   const currentBook = getAllBooks().find(book => book.state === 'in_progress')
+  const episodes = (await getEpisodes()).slice(0, 3)
 
   return {
     props: {
       currentBook,
+      episodes,
     },
   }
 }
 
-export default function Home({ currentBook, articleData }) {
+export default function Home({ currentBook, episodes }) {
   return (
     <>
       <Nav />
@@ -27,7 +30,7 @@ export default function Home({ currentBook, articleData }) {
       <main>
         <div className="container is-thin mb-6">
           <Hero currentBook={currentBook} />
-          <RecentEpisodes />
+          <RecentEpisodes episodes={episodes} />
           <Story />
           <ComingUpNext />
         </div>
@@ -38,13 +41,23 @@ export default function Home({ currentBook, articleData }) {
   )
 }
 
-function RecentEpisodes() {
+function RecentEpisodes({ episodes }) {
   return (
     <section className="section" id="podcast">
       <div className="content is-medium">
         <h2 className="is-header-2">Recent Episodes</h2>
       </div>
-      todo
+
+      <ul>
+        {episodes.map((episode, i) => (
+          <EpisodePreview
+            key={i}
+            title={episode.title}
+            description={episode.description}
+            link={episode.link}
+          />
+        ))}
+      </ul>
     </section>
   )
 }

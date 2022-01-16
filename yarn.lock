@@ -2803,6 +2803,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-xml-parser@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "fast-xml-parser@npm:4.0.1"
+  dependencies:
+    strnum: ^1.0.5
+  bin:
+    fxparser: src/cli/cli.js
+  checksum: 66754c5dbb662181e737f2512d78031e67d25a5f3c84102d8e7cc0d494517e7ea19f07f36066d146c77acb88ef17fc989338439d4e5115eb9b077a755cafbabe
+  languageName: node
+  linkType: hard
+
 "fb-watchman@npm:^2.0.0":
   version: 2.0.1
   resolution: "fb-watchman@npm:2.0.1"
@@ -6530,6 +6541,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"strnum@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "strnum@npm:1.0.5"
+  checksum: 8b73ef3de223bd07c662d1983fbadbfc8faedbbd75322e4d03a334e48ca5ca405d960a106bf7163f9f528e831b8cb173b9c9896bc37d6f97f8c78f8dd93ad7a2
+  languageName: node
+  linkType: hard
+
 "styled-jsx@npm:5.0.0-beta.3":
   version: 5.0.0-beta.3
   resolution: "styled-jsx@npm:5.0.0-beta.3"
@@ -6634,6 +6652,7 @@ __metadata:
     babel-jest: ^26.6.3
     bulma: ^0.9.2
     classnames: ^2.2.6
+    fast-xml-parser: ^4.0.1
     jest: ^26.6.3
     lodash: ^4.17.20
     next: ^12.0.7
