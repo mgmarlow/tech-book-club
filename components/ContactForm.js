@@ -6,14 +6,14 @@ const ContactForm = () => {
       data-netlify="true"
       netlify-honeypot="bot-field"
     >
-      <p class="is-hidden">
+      <p className="is-hidden">
         <label>
           Don’t fill this out if you’re human: <input name="bot-field" />
         </label>
       </p>
 
       <div className="field">
-        <label for="subject" className="label">
+        <label htmlFor="subject" className="label">
           Subject
         </label>
         <div className="control">
@@ -29,7 +29,7 @@ const ContactForm = () => {
       </div>
 
       <div className="field">
-        <label for="email" className="label">
+        <label htmlFor="email" className="label">
           Email
         </label>
         <div className="control">
@@ -45,10 +45,10 @@ const ContactForm = () => {
       </div>
 
       <div className="field">
-        <label for="message" class="label">
+        <label htmlFor="message" className="label">
           Message
         </label>
-        <div class="control">
+        <div className="control">
           <textarea
             id="message"
             name="message"
@@ -58,7 +58,7 @@ const ContactForm = () => {
         </div>
       </div>
 
-      <div class="control">
+      <div className="control">
         <button type="submit" className="button is-link">
           Submit
         </button>

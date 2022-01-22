@@ -2,7 +2,6 @@ import classNames from 'classnames'
 import Link from 'next/link'
 import {
   ANCHOR_URL,
-  CONTACT_US_URL,
   LICENSE_URL,
   GRAHAM_HOME_URL,
   NOLAN_HOME_URL,
@@ -31,11 +30,8 @@ export default function Footer() {
       </div>
 
       <div className="columns is-centered">
-        <div className="column is-narrow mr-5 has-text-centered">
-          <FooterLink href={ANCHOR_URL}>podcast ↗</FooterLink>
-        </div>
-        <div className="column is-narrow mr-5 has-text-centered">
-          <FooterLink href={CONTACT_US_URL}>contact us ↗</FooterLink>
+        <div className="column is-narrow">
+          <FooterLink href={ANCHOR_URL}>All episodes ↗</FooterLink>
         </div>
       </div>
     </footer>

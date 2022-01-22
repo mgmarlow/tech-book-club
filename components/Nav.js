@@ -42,6 +42,10 @@ export default function Nav() {
           <Link href="/#books">
             <a className="navbar-item has-text-weight-bold">books</a>
           </Link>
+
+          <Link href="/#contact">
+            <a className="navbar-item has-text-weight-bold">contact</a>
+          </Link>
         </div>
       </div>
     </nav>

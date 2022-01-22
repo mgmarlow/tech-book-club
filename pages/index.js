@@ -5,9 +5,9 @@ import Nav from '../components/Nav'
 import SEO from '../components/SEO'
 import BookList from '../components/BookList'
 import { getAllBooks } from '../lib/books'
-import { CONTACT_US_URL } from '../constants/env'
 import { getEpisodes } from '../lib/episodes'
 import EpisodePreview from '../components/EpisodePreview'
+import ContactForm from '../components/ContactForm'
 
 export async function getStaticProps() {
   const currentBook = getAllBooks().find(book => book.state === 'in_progress')
@@ -33,6 +33,7 @@ export default function Home({ currentBook, episodes }) {
           <RecentEpisodes episodes={episodes} />
           <Story />
           <ComingUpNext />
+          <ContactUs />
         </div>
       </main>
 
@@ -45,19 +46,25 @@ function RecentEpisodes({ episodes }) {
   return (
     <section className="section" id="podcast">
       <div className="content is-medium">
-        <h2 className="is-header-2">Recent Episodes</h2>
+        <h2>Recent Episodes</h2>
       </div>
 
-      <ul>
-        {episodes.map((episode, i) => (
-          <EpisodePreview
-            key={i}
-            title={episode.title}
-            description={episode.description}
-            link={episode.link}
-          />
-        ))}
-      </ul>
+      {episodes.length === 0 ? (
+        <p>
+          <em>Coming soon!</em>
+        </p>
+      ) : (
+        <ul>
+          {episodes.map((episode, i) => (
+            <EpisodePreview
+              key={i}
+              title={episode.title}
+              description={episode.description}
+              link={episode.link}
+            />
+          ))}
+        </ul>
+      )}
     </section>
   )
 }
@@ -122,10 +129,23 @@ function Story({ className }) {
         </p>
         <p>
           After the book club disbanded, Nolan and I decided to keep the
-          discussion alive in the form of this podcast. We hope you find our
-          discussions entertaining. If you'd like to leave feedback,
-          <a href={CONTACT_US_URL}> contact us</a>.
+          discussion alive in the form of this podcast. Our goal is to share
+          that sense of community-driven conversation with listeners abroad.
         </p>
+      </div>
+    </section>
+  )
+}
+
+function ContactUs({ className }) {
+  return (
+    <section className={classnames(className, 'section')} id="contact">
+      <div className="content is-medium">
+        <h2>Contact Us</h2>
+        <p>
+          Have an idea for an episode? Dying to ask a question? Drop us a line.
+        </p>
+        <ContactForm />
       </div>
     </section>
   )
