@@ -1,4 +1,4 @@
-import { useReducer } from 'react'
+import { useReducer, useState } from 'react'
 
 const encode = data =>
   Object.keys(data)
@@ -6,6 +6,7 @@ const encode = data =>
     .join('&')
 
 const initialState = {
+  state: 'idle',
   subject: '',
   email: '',
   message: '',
@@ -18,8 +19,12 @@ const useForm = () => {
       return { ...state, [field]: value }
     }
 
-    if (action.type === 'reset') {
-      return initialState
+    if (action.type === 'success') {
+      return { ...initialState, state: 'success' }
+    }
+
+    if (action.type === 'failure') {
+      return { ...state, state: 'failure' }
     }
 
     return state
@@ -32,24 +37,38 @@ const useForm = () => {
     })
   }
 
-  return { ...state, onChange }
+  const onSuccess = () => {
+    dispatch({ type: 'success' })
+  }
+
+  const onFailure = () => {
+    dispatch({ type: 'failure' })
+  }
+
+  return { ...state, onChange, onSuccess, onFailure }
 }
 
 const ContactForm = () => {
-  const { subject, email, message, onChange } = useForm()
+  const { state, subject, email, message, onChange, onSuccess, onFailure } =
+    useForm()
 
   const handleSubmit = e => {
     e.preventDefault()
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': event.target.getAttribute('name'),
-        subject,
-        email,
-        message,
-      }),
-    })
+    try {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': e.target.getAttribute('name'),
+          subject,
+          email,
+          message,
+        }),
+      })
+      onSuccess()
+    } catch {
+      onFailure()
+    }
   }
 
   return (
@@ -118,6 +137,15 @@ const ContactForm = () => {
         <button type="submit" className="button is-link">
           Submit
         </button>
+        {state === 'success' ? (
+          <p className="has-text-success is-inline-block ml-5 mt-2 ">
+            Email sent!
+          </p>
+        ) : state === 'failure' ? (
+          <p className="has-text-danger is-inline-block ml-5 mt-2">
+            Oh no, something went wrong! Please try again later.
+          </p>
+        ) : null}
       </div>
     </form>
   )
