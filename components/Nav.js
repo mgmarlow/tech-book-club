@@ -31,8 +31,8 @@ export default function Nav() {
         className={classnames('navbar-menu', { 'is-active': isOpen })}
       >
         <div className="navbar-start">
-          <Link href="/archive">
-            <a className="navbar-item has-text-weight-bold">archive</a>
+          <Link href="/#podcast">
+            <a className="navbar-item has-text-weight-bold">podcast</a>
           </Link>
 
           <Link href="/#story">
@@ -41,6 +41,10 @@ export default function Nav() {
 
           <Link href="/#books">
             <a className="navbar-item has-text-weight-bold">books</a>
+          </Link>
+
+          <Link href="/#contact">
+            <a className="navbar-item has-text-weight-bold">contact</a>
           </Link>
         </div>
       </div>

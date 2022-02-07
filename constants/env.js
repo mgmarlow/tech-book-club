@@ -1,10 +1,9 @@
 // Outbound URLs
 export const LICENSE_URL =
   'https://github.com/mgmarlow/tech-book-club/blob/master/LICENSE'
-export const NEWSLETTER_URL = 'https://buttondown.email/techbookclub/archive/'
-
-// ENV
-export const FIREBASE_API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY
-export const FIREBASE_PROJECT_ID = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID
-export const FIREBASE_SENDER_ID = process.env.NEXT_PUBLIC_FIREBASE_SENDER_ID
-export const FIREBASE_APP_ID = process.env.NEXT_PUBLIC_FIREBASE_APP_ID
+export const ANCHOR_URL = 'https://anchor.fm/techbookclub'
+export const CONTACT_US_URL = 'https://airtable.com/shrKc6x7sWO4rOOel'
+export const GRAHAM_HOME_URL = 'https://mgmarlow.com'
+export const NOLAN_HOME_URL = 'https://nolansedley.netlify.app'
+// TODO:
+export const RSS_URL = undefined

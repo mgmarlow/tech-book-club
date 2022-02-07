@@ -1,26 +1,27 @@
 import classnames from 'classnames'
-import Link from 'next/link'
 import Book from '../components/Book'
 import Footer from '../components/Footer'
 import Nav from '../components/Nav'
 import SEO from '../components/SEO'
 import BookList from '../components/BookList'
 import { getAllBooks } from '../lib/books'
-import { getArticleDataByDate } from '../lib/articles'
+import { getEpisodes } from '../lib/episodes'
+import EpisodePreview from '../components/EpisodePreview'
+import ContactForm from '../components/ContactForm'
 
 export async function getStaticProps() {
   const currentBook = getAllBooks().find(book => book.state === 'in_progress')
-  const articleData = (await getArticleDataByDate()).slice(0, 3)
+  const episodes = (await getEpisodes()).slice(0, 3)
 
   return {
     props: {
       currentBook,
-      articleData,
+      episodes,
     },
   }
 }
 
-export default function Home({ currentBook, articleData }) {
+export default function Home({ currentBook, episodes }) {
   return (
     <>
       <Nav />
@@ -29,14 +30,42 @@ export default function Home({ currentBook, articleData }) {
       <main>
         <div className="container is-thin mb-6">
           <Hero currentBook={currentBook} />
-          <ArticlePreview articleData={articleData} />
+          <RecentEpisodes episodes={episodes} />
           <Story />
           <ComingUpNext />
+          <ContactUs />
         </div>
       </main>
 
       <Footer />
     </>
+  )
+}
+
+function RecentEpisodes({ episodes }) {
+  return (
+    <section className="section" id="podcast">
+      <div className="content is-medium">
+        <h2>Recent Episodes</h2>
+      </div>
+
+      {episodes.length === 0 ? (
+        <p>
+          <em>Coming soon!</em>
+        </p>
+      ) : (
+        <ul>
+          {episodes.map((episode, i) => (
+            <EpisodePreview
+              key={i}
+              title={episode.title}
+              description={episode.description}
+              link={episode.link}
+            />
+          ))}
+        </ul>
+      )}
+    </section>
   )
 }
 
@@ -64,36 +93,6 @@ function Hero({ currentBook }) {
             <Book book={currentBook} />
           </div>
         )}
-      </div>
-    </section>
-  )
-}
-
-function ArticlePreview({ articleData }) {
-  const previews = articleData.map(a => (
-    <Link href={`/archive/${a.id}`} key={a.id}>
-      <li className="media is-clickable">
-        <div className="media-content">
-          <span>
-            <strong>{a.title}</strong>
-          </span>
-          <p className="is-size-6">{a.description}</p>
-        </div>
-      </li>
-    </Link>
-  ))
-
-  return (
-    <section className="section">
-      <div className="content is-medium">
-        <h2>Recent articles</h2>
-
-        <p>
-          Read the newest stuff or browse the{' '}
-          <Link href="/archive">archive</Link>.
-        </p>
-
-        <ul className="ml-0">{previews}</ul>
       </div>
     </section>
   )
@@ -129,10 +128,24 @@ function Story({ className }) {
           new level of insight to already great computer science literature.
         </p>
         <p>
-          Although our group no longer meets on a regular cadence, I created
-          this newsletter to keep the idea alive and foster a community around
-          studying software engineering.
+          After the book club disbanded, Nolan and I decided to keep the
+          discussion alive in the form of this podcast. Our goal is to share
+          that sense of community-driven conversation with listeners abroad.
         </p>
+      </div>
+    </section>
+  )
+}
+
+function ContactUs({ className }) {
+  return (
+    <section className={classnames(className, 'section')} id="contact">
+      <div className="content is-medium">
+        <h2>Contact Us</h2>
+        <p>
+          Have an idea for an episode? Dying to ask a question? Drop us a line.
+        </p>
+        <ContactForm />
       </div>
     </section>
   )
