@@ -1,16 +1,66 @@
+import { useReducer } from 'react'
+
+const encode = data =>
+  Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+
+const initialState = {
+  subject: '',
+  email: '',
+  message: '',
+}
+
+const useForm = () => {
+  const [state, dispatch] = useReducer((state, action) => {
+    if (action.type === 'update_field') {
+      const { field, value } = action.payload
+      return { ...state, [field]: value }
+    }
+
+    if (action.type === 'reset') {
+      return initialState
+    }
+
+    return state
+  }, initialState)
+
+  const onChange = (name, e) => {
+    dispatch({
+      type: 'update_field',
+      payload: { field: name, value: e.target.value },
+    })
+  }
+
+  return { ...state, onChange }
+}
+
 const ContactForm = () => {
+  const { subject, email, message, onChange } = useForm()
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': event.target.getAttribute('name'),
+        subject,
+        email,
+        message,
+      }),
+    })
+  }
+
   return (
     <form
+      onSubmit={handleSubmit}
       name="contact"
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
     >
-      <p className="is-hidden">
-        <label>
-          Don’t fill this out if you’re human: <input name="bot-field" />
-        </label>
-      </p>
+      <input type="hidden" name="form-name" value="contact" />
 
       <div className="field">
         <label htmlFor="subject" className="label">
@@ -19,6 +69,8 @@ const ContactForm = () => {
         <div className="control">
           <input
             className="input"
+            value={subject}
+            onChange={e => onChange('subject', e)}
             type="text"
             name="subject"
             id="subject"
@@ -35,6 +87,8 @@ const ContactForm = () => {
         <div className="control">
           <input
             id="email"
+            value={email}
+            onChange={e => onChange('email', e)}
             className="input"
             type="text"
             name="email"
@@ -51,6 +105,8 @@ const ContactForm = () => {
         <div className="control">
           <textarea
             id="message"
+            value={message}
+            onChange={e => onChange('message', e)}
             name="message"
             className="textarea"
             placeholder="Good vibes only"
