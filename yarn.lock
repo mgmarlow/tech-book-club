@@ -2803,14 +2803,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-xml-parser@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "fast-xml-parser@npm:4.0.1"
+"fast-xml-parser@npm:^4.2.4":
+  version: 4.2.4
+  resolution: "fast-xml-parser@npm:4.2.4"
   dependencies:
     strnum: ^1.0.5
   bin:
     fxparser: src/cli/cli.js
-  checksum: 66754c5dbb662181e737f2512d78031e67d25a5f3c84102d8e7cc0d494517e7ea19f07f36066d146c77acb88ef17fc989338439d4e5115eb9b077a755cafbabe
+  checksum: 2229fb6f0f09124031282f2a88dc36829e76313f5a6403f35e4ffe3f4b4856a77fbbf6a6275acd77378521de0d3110e5f4589ebcb24cd8a6cb4808640025c54d
   languageName: node
   linkType: hard
 
@@ -6652,7 +6652,7 @@ __metadata:
     babel-jest: ^26.6.3
     bulma: ^0.9.2
     classnames: ^2.2.6
-    fast-xml-parser: ^4.0.1
+    fast-xml-parser: ^4.2.4
     jest: ^26.6.3
     lodash: ^4.17.20
     next: ^12.0.7
